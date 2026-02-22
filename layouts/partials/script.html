@@ -1,23 +1,16 @@
-<!-- font family -->
-<script async src="https://cdn.jsdelivr.net/gh/theprojectsomething/webfontloader@feature/google-fonts-v2/webfontloader.js"></script>
-{{$pf:= site.Params.variables.primary_font}}
+<!-- font family (loaded via <link> in head for faster FCP — no JS needed) -->
+{{$pf:= site.Params.variables.primary_font | default "Poppins:wght@400;500;600;700"}}
 {{$sf:= site.Params.variables.secondary_font}}
-<script>
-  (function loadFonts() {
-    if (typeof WebFont !== 'undefined') {
-      WebFont.load({
-        google: {
-          api: 'https://fonts.googleapis.com/css2',
-          families: ['{{$pf | default `Poppins:wght@400;500;600;700`}}{{if not $sf}}&display=swap{{end}}'{{with $sf}},'{{. | default `Lato:wght@400`}}&display=swap'{{end}}],
-          version: 2
-        },
-        active: function() { sessionStorage.fontsLoaded = true; }
-      });
-    } else {
-      setTimeout(loadFonts, 100);
-    }
-  })();
-</script>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family={{$pf}}&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family={{$pf}}&display=swap" media="print" onload="this.media='all'">
+{{with $sf}}
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family={{.}}&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family={{.}}&display=swap" media="print" onload="this.media='all'">
+{{end}}
+<noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family={{$pf}}&display=swap">
+  {{with $sf}}<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family={{.}}&display=swap">{{end}}
+</noscript>
 
 <!-- JS Plugins + Main script -->
 {{ $scripts := slice }}
