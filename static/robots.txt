@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://piki-app.fr/sitemap.xml
