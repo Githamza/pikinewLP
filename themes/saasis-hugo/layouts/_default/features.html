@@ -137,10 +137,10 @@
           <div class="accordion faq" id="accordionFAQ">
             {{ range $i, $e := .Params.faq }}
             <div class="accordion-item bg-white-blur rounded-sm border">
-              <h2 class="accordion-header" id="heading-{{ .title | urlize }}">
-                <button class="accordion-button {{if ne $i 0 }}collapsed{{end}} h5 font-secondary border-0" style="font-weight:600" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{ .title | urlize }}" aria-expanded="{{if eq $i 0 }}true{{else}}false{{end}}" aria-controls="collapse-{{ .title | urlize }}">{{ .title | markdownify }}</button>
+              <h2 class="accordion-header" id="heading-faq-{{ $i }}">
+                <button class="accordion-button {{if ne $i 0 }}collapsed{{end}} h5 font-secondary border-0" style="font-weight:600" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-faq-{{ $i }}" aria-expanded="{{if eq $i 0 }}true{{else}}false{{end}}" aria-controls="collapse-faq-{{ $i }}">{{ .title | markdownify }}</button>
               </h2>
-              <div id="collapse-{{ .title | urlize }}" class="accordion-collapse collapse border-0 {{if eq $i 0 }}show{{end}}" aria-labelledby="heading-{{ .title | urlize }}" data-bs-parent="#accordionFAQ">
+              <div id="collapse-faq-{{ $i }}" class="accordion-collapse collapse border-0 {{if eq $i 0 }}show{{end}}" aria-labelledby="heading-faq-{{ $i }}" data-bs-parent="#accordionFAQ">
                 <div class="accordion-body">
                   {{ .content | markdownify }}
                 </div>
