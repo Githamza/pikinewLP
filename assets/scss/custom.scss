@@ -1,5 +1,8 @@
 /* ==================== PIKI CUSTOM STYLES ==================== */
 
+/* Accessible text color: #C05300 gives 4.65:1 contrast on white (WCAG AA) */
+$primary-color-text: #C05300;
+
 /* AOS safety net: show elements until AOS is initialized */
 [data-aos] {
   opacity: 1 !important;
@@ -73,7 +76,7 @@ body.aos-initialized [data-aos] {
   width: 100%;
   left: 0;
   top: 0;
-  color: $primary-color;
+  color: $primary-color-text;
   font-weight: 700;
   opacity: 0;
   transform: translateY(100%);
@@ -217,7 +220,7 @@ body.aos-initialized [data-aos] {
   .timeline-time {
     font-size: 0.85rem;
     font-weight: 700;
-    color: $primary-color;
+    color: $primary-color-text;
     margin-top: 4px;
   }
 
@@ -287,4 +290,18 @@ body.aos-initialized [data-aos] {
 /* Final CTA Section */
 section:last-of-type {
   padding-bottom: 80px;
+}
+
+/* ==================== ACCESSIBILITY: CONTRAST FIXES ==================== */
+/* Override primary-colored text on light backgrounds for WCAG AA (4.5:1) */
+.section-title .caption {
+  color: $primary-color-text;
+}
+
+.text-primary {
+  color: $primary-color-text !important;
+}
+
+.pricing-piki .pricing-amount .h3 {
+  color: $primary-color-text;
 }
