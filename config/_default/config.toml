@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = "/"
+baseURL = "https://piki-app.fr/"
 title = "Piki — Commande en ligne pour restaurants | 0% de commission"
 theme = "saasis-hugo"
 defaultContentLanguage = "fr"

@@ -1,0 +1,65 @@
+{{/* SoftwareApplication / Organization Schema */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Piki",
+  "url": "{{ site.BaseURL }}",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "description": "{{ site.Params.description }}",
+  "offers": {
+    "@type": "Offer",
+    "price": "49",
+    "priceCurrency": "EUR",
+    "priceValidUntil": "{{ now.AddDate 1 0 0 | time.Format "2006-01-02" }}",
+    "availability": "https://schema.org/InStock"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "Piki",
+    "url": "{{ site.BaseURL }}",
+    "email": "{{ site.Params.email }}",
+    "sameAs": [
+      {{ range $i, $s := site.Params.social }}{{ if $i }},{{ end }}"{{ $s.link }}"{{ end }}
+    ]
+  }
+}
+</script>
+
+{{/* FAQPage Schema - generated from front matter */}}
+{{ with .Params.faq_section }}
+{{ if .items }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {{ range $i, $item := .items }}
+    {{ if $i }},{{ end }}
+    {
+      "@type": "Question",
+      "name": {{ $item.title | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ $item.content | jsonify }}
+      }
+    }
+    {{ end }}
+  ]
+}
+</script>
+{{ end }}
+{{ end }}
+
+{{/* WebSite Schema with SearchAction */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Piki",
+  "url": "{{ site.BaseURL }}",
+  "inLanguage": "fr-FR",
+  "description": "{{ site.Params.description }}"
+}
+</script>

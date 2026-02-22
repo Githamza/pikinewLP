@@ -1,3 +1,3 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = 'https://piki-app.fr/'
+languageCode = 'fr-fr'
+title = 'Piki — Commande en ligne pour restaurants | 0% de commission'
