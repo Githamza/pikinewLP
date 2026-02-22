@@ -1,0 +1,308 @@
+{{ define "main" }}
+
+{{ partial "hero-rotation.html" . }}
+
+<main>
+  {{/* ==================== SECTION 1: HERO WITH ROTATING TEXT ==================== */}}
+  {{ with .Params.hero }}
+  <section class="py-5 my-4">
+    <div class="container">
+      <div class="row justify-content-around align-items-center">
+        <div class="col-xxl-5 col-lg-6 col-md-8 text-center text-lg-start mb-5 mb-lg-0">
+          <div class="hero-content">
+            <h1 class="banner-title mb-3">
+              {{ .title_before | markdownify }}
+              <span class="hero-rotating-wrapper">
+                {{ range $i, $phrase := .rotating_phrases }}
+                <span class="hero-rotating-text {{ if eq $i 0 }}active{{ end }}" data-index="{{ $i }}">{{ $phrase }}</span>
+                {{ end }}
+              </span>
+            </h1>
+            <p class="lead mb-4">{{ .subtitle | markdownify }}</p>
+            <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+              <a href="{{ .cta_link }}" class="btn btn-primary btn-lg px-5">{{ .cta_label }}</a>
+              <span class="badge-zero-commission align-self-center">{{ .badge }}</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 d-none d-lg-block" data-aos="fade-up" data-aos-delay="150">
+          <div class="hero-image-wrapper position-relative">
+            {{ range $i, $slide := .slides }}
+            <div class="hero-slide {{ if eq $i 0 }}active{{ end }}" data-index="{{ $i }}">
+              <div class="banner-image">
+                {{ $main := resources.Get .image }}
+                {{ if $main }}
+                {{ $main = $main.Resize "420x webp" }}
+                <img loading="{{ if eq $i 0 }}eager{{ else }}lazy{{ end }}" decoding="async" class="character jumping img-fluid" src="{{ $main.RelPermalink }}" alt="{{ .alt }}" width="{{ $main.Width }}" height="{{ $main.Height }}">
+                {{ end }}
+
+                {{ with .decoration_1 }}
+                {{ $d1 := resources.Get . }}
+                {{ if $d1 }}{{ $d1 = $d1.Resize "119x webp" }}
+                <img loading="lazy" decoding="async" class="lamp img-fluid" src="{{ $d1.RelPermalink }}" alt="" width="{{ $d1.Width }}" height="{{ $d1.Height }}">
+                {{ end }}{{ end }}
+
+                {{ with .decoration_2 }}
+                {{ $d2 := resources.Get . }}
+                {{ if $d2 }}{{ $d2 = $d2.Resize "126x webp" }}
+                <img loading="lazy" decoding="async" class="cube img-fluid" src="{{ $d2.RelPermalink }}" alt="" width="{{ $d2.Width }}" height="{{ $d2.Height }}">
+                {{ end }}{{ end }}
+
+                {{ with .decoration_3 }}
+                {{ $d3 := resources.Get . }}
+                {{ if $d3 }}{{ $d3 = $d3.Resize "113x webp" }}
+                <img loading="lazy" decoding="async" class="chess img-fluid" src="{{ $d3.RelPermalink }}" alt="" width="{{ $d3.Width }}" height="{{ $d3.Height }}">
+                {{ end }}{{ end }}
+              </div>
+            </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  {{/* ==================== SECTION 2: THREE USE-CASE CARDS ==================== */}}
+  {{ with .Params.use_cases }}
+  <section class="pb-5" data-aos="fade-up">
+    <div class="container">
+      <div class="row g-4 justify-content-center">
+        {{ range .items }}
+        <div class="col-lg-4 col-md-6">
+          <div class="use-case-card rounded-sm border bg-white-blur p-4 text-center h-100">
+            <div class="use-case-icon mb-3">{{ .icon }}</div>
+            <h3 class="h5 mb-2">{{ .title }}</h3>
+            <p class="mb-0 text-muted">{{ .description }}</p>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  {{/* ==================== SECTION 3: PAIN POINTS ==================== */}}
+  {{ with .Params.pain_points }}
+  <section class="section-bordered-even" data-aos="fade">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-8 text-center">
+          <div class="section-title">
+            <h2>{{ .heading | markdownify }}</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row g-4 justify-content-center">
+        {{ range .items }}
+        <div class="col-lg-4 col-md-6">
+          <div class="pain-card rounded-sm border p-4 text-center h-100">
+            <div class="pain-icon mb-3">{{ .icon }}</div>
+            <h3 class="h5 mb-2">{{ .title }}</h3>
+            <p class="mb-0">{{ .description }}</p>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  {{/* ==================== SECTION 4: HOW IT WORKS ==================== */}}
+  {{ with .Params.how_it_works }}
+  <section data-aos="fade">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-8 text-center">
+          <div class="section-title">
+            <p class="caption">{{ .caption }}</p>
+            <h2>{{ .heading | markdownify }}</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row g-4 justify-content-center">
+        {{ range $i, $step := .steps }}
+        <div class="col-lg-4 col-md-6">
+          <div class="step-card text-center p-4">
+            <div class="step-number mb-3">{{ add $i 1 }}</div>
+            <div class="step-icon mb-3">{{ .icon }}</div>
+            <h3 class="h5 mb-2">{{ .title }}</h3>
+            <p class="mb-0 text-muted">{{ .description }}</p>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  {{/* ==================== SECTION 5: KEY FEATURES ==================== */}}
+  {{ with .Params.key_features }}
+  <section class="section-bordered-even" data-aos="fade">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-8 text-center">
+          <div class="section-title">
+            <p class="caption">{{ .caption }}</p>
+            <h2>{{ .heading | markdownify }}</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row g-4">
+        {{ range .items }}
+        <div class="col-lg-6">
+          <div class="feature-card rounded-sm border bg-white-blur p-4 d-flex align-items-start h-100">
+            <div class="feature-icon me-3 flex-shrink-0">{{ .icon }}</div>
+            <div>
+              <h3 class="h5 mb-2">{{ .title }}</h3>
+              <p class="mb-0">{{ .description }}</p>
+            </div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  {{/* ==================== SECTION 6: DAILY TIMELINE ==================== */}}
+  {{ with .Params.timeline }}
+  <section data-aos="fade">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-8 text-center">
+          <div class="section-title">
+            <h2>{{ .heading | markdownify }}</h2>
+            <p>{{ .subtitle }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="timeline-container">
+            {{ range .steps }}
+            <div class="timeline-item d-flex mb-4">
+              <div class="timeline-marker flex-shrink-0">
+                <span class="timeline-icon">{{ .icon }}</span>
+                <span class="timeline-time">{{ .time }}</span>
+              </div>
+              <div class="timeline-content ms-4">
+                <h4 class="h5 mb-1">{{ .title }}</h4>
+                <p class="mb-0 text-muted">{{ .description }}</p>
+              </div>
+            </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  {{/* ==================== SECTION 7: PRICING COMPARISON ==================== */}}
+  {{ with .Params.pricing_comparison }}
+  <section class="section-bordered-even" data-aos="fade">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-8 text-center">
+          <div class="section-title">
+            <h2>{{ .heading | markdownify }}</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row g-4 justify-content-center">
+        {{/* Competitor card */}}
+        <div class="col-lg-5 col-md-6">
+          <div class="pricing-card pricing-competitor rounded-sm border p-4 p-lg-5 h-100">
+            <h3 class="h5 mb-3">{{ .competitor.name }}</h3>
+            <div class="pricing-amount mb-3">
+              <span class="h3">{{ .competitor.commission }}</span>
+              <small class="text-muted">{{ .competitor.commission_label }}</small>
+            </div>
+            <div class="pricing-example p-3 rounded mb-4">
+              <p class="mb-0"><strong>{{ .competitor.example }}</strong></p>
+            </div>
+            <ul class="pricing-features list-unstyled">
+              {{ range .competitor.drawbacks }}
+              <li class="mb-2"><i class="fas fa-times text-danger me-2"></i>{{ . }}</li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+        {{/* Piki card */}}
+        <div class="col-lg-5 col-md-6">
+          <div class="pricing-card pricing-piki rounded-sm border border-primary p-4 p-lg-5 h-100 position-relative">
+            <span class="pricing-badge">Recommandé</span>
+            <h3 class="h5 mb-3">{{ .piki.name }}</h3>
+            <div class="pricing-amount mb-1">
+              <span class="h3">{{ .piki.price }}</span>
+              <small class="text-muted">{{ .piki.per }}</small>
+            </div>
+            <p class="text-primary fw-bold mb-3">{{ .piki.commission }}</p>
+            <div class="pricing-example pricing-example-piki p-3 rounded mb-4">
+              <p class="mb-0"><strong>{{ .piki.example }}</strong></p>
+            </div>
+            <ul class="pricing-features list-unstyled">
+              {{ range .piki.benefits }}
+              <li class="mb-2"><i class="fas fa-check text-success me-2"></i>{{ . }}</li>
+              {{ end }}
+            </ul>
+            <a href="{{ .piki.cta_link }}" class="btn btn-primary d-block mt-4">{{ .piki.cta_label }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  {{/* ==================== SECTION 8: FAQ ==================== */}}
+  {{ with .Params.faq_section }}
+  <section data-aos="fade">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-8 text-center">
+          <div class="section-title">
+            <h2>{{ .heading | markdownify }}</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="accordion faq" id="accordionFAQ">
+            {{ range $i, $item := .items }}
+            <div class="accordion-item bg-white-blur rounded border mb-3">
+              <h2 class="accordion-header" id="heading-{{ $item.title | urlize }}">
+                <button class="accordion-button {{ if ne $i 0 }}collapsed{{ end }} h5 font-secondary border-0" style="font-weight:600" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{ $item.title | urlize }}" aria-expanded="{{ if eq $i 0 }}true{{ else }}false{{ end }}" aria-controls="collapse-{{ $item.title | urlize }}">{{ $item.title | markdownify }}</button>
+              </h2>
+              <div id="collapse-{{ $item.title | urlize }}" class="accordion-collapse collapse border-0 {{ if eq $i 0 }}show{{ end }}" aria-labelledby="heading-{{ $item.title | urlize }}" data-bs-parent="#accordionFAQ">
+                <div class="accordion-body">
+                  {{ $item.content | markdownify }}
+                </div>
+              </div>
+            </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  {{/* ==================== SECTION 9: FINAL CTA ==================== */}}
+  {{ with .Params.final_cta }}
+  <section class="section-bordered-even" data-aos="fade-up">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="mb-3">{{ .heading | markdownify }}</h2>
+          <p class="lead mb-4">{{ .subtitle | markdownify }}</p>
+          <a href="{{ .cta_link }}" class="btn btn-primary btn-lg px-5">{{ .cta_label }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+</main>
+
+{{ end }}

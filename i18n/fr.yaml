@@ -1,0 +1,55 @@
+- id: home
+  translation: Accueil
+
+- id: email_address
+  translation: Votre adresse email
+
+- id: get_started
+  translation: Essai gratuit
+
+- id: all_features
+  translation: Toutes les fonctionnalités
+
+- id: about
+  translation: Piki
+
+- id: service
+  translation: Solutions
+
+- id: help
+  translation: Aide
+
+- id: subscribe_newsletter
+  translation: Restez informé des nouveautés Piki
+
+- id: read_more
+  translation: Lire la suite
+
+- id: name
+  translation: Nom
+- id: name_placeholder
+  translation: Votre nom
+
+- id: email_placeholder
+  translation: Votre adresse email
+
+- id: phone
+  translation: Téléphone
+- id: phone_placeholder
+  translation: "+33 6 00 00 00 00"
+
+- id: company
+  translation: Restaurant
+- id: company_name_placeholder
+  translation: Le nom de votre restaurant
+
+- id: message
+  translation: Message
+- id: message_placeholder
+  translation: "Bonjour, j'aimerais en savoir plus sur Piki..."
+
+- id: send_message
+  translation: Envoyer
+
+- id: footer_copyright
+  translation: "&copy; 2026 Piki. Tous droits réservés."

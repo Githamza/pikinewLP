@@ -1,0 +1,45 @@
+favicon = "images/favicon.png"
+logo_text = "Saasis"
+logo = "images/logo.svg"
+logo_width = "101px"
+description = "This is meta description"
+author = "Themefisher"
+address = "9567 Turner Trace Apt. BC C3G8A4"
+mobile = "+211234565523"
+email = "info@email.com"
+footer_info = "This is the start of dummy description text. You can change it whenever you want. ea voluptatem adipisci sapiente?"
+contact_form_action = "#"
+newsletter_form_action = "#"
+custom_script = ""
+page_header = "images/page-header.webp"
+[[social]]
+title = "facebook"
+icon = "fab fa-facebook"
+link = "#"
+[[social]]
+title = "twitter"
+icon = "fab fa-twitter"
+link = "#"
+[[social]]
+title = "instagram"
+icon = "fab fa-instagram"
+link = "#"
+[[social]]
+title = "github"
+icon = "fab fa-github"
+link = "#"
+[[social]]
+title = "linkedin"
+icon = "fab fa-linkedin"
+link = "#"
+[preloader]
+enable = true
+[navigation_button]
+enable = true
+label = "Try For Free"
+link = "contact/"
+[cookies]
+enable = false
+expire_days = 2
+content = "This site uses cookies. By continuing to use this website, you agree to their use."
+button = "I Accept"

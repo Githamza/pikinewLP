@@ -1,0 +1,44 @@
+######################## default configuration ####################
+baseURL = "/"
+title = "Piki — Commande en ligne pour restaurants | 0% de commission"
+theme = "saasis-hugo"
+defaultContentLanguage = "fr"
+# post pagination
+pagination.pagerSize = 6
+# post excerpt
+summaryLength = "10"
+# disable language
+disableLanguages = []
+
+########################### Services #############################
+[services]
+[services.googleAnalytics]
+ID = 'G-MEASUREMENT_ID' # TODO: replace with real GA ID
+
+[services.disqus]
+shortname = ''
+
+############################# Imaging ##############################
+[imaging]
+quality = 90
+
+############################# Outputs ##############################
+[outputs]
+home = ["HTML", "RSS", "JSON", "WebAppManifest"]
+
+[markup]
+[markup.goldmark.renderer]
+unsafe = true
+
+[mediaTypes]
+[mediaTypes."application/manifest+json"]
+suffixes = ["webmanifest"]
+
+[mediaTypes."text/netlify"]
+delimiter = ""
+suffixes = [""]
+
+[outputFormats]
+[outputFormats.WebAppManifest]
+mediaType = "application/manifest+json"
+rel = "manifest"

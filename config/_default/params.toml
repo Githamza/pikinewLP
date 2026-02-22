@@ -1,0 +1,43 @@
+favicon = "images/favicon.png"
+logo_text = "Piki"
+logo = "images/logo.svg"
+logo_width = "101px"
+description = "Piki permet aux restaurants de recevoir des commandes en ligne sans commission. Click & collect, commande sur place, livraison. Essai gratuit."
+author = "Piki"
+address = ""
+mobile = ""
+email = "contact@piki-app.fr"
+footer_info = "La solution de commande en ligne pour restaurants. Pré-commande, sur place, livraison — 0% de commission."
+contact_form_action = "#"
+newsletter_form_action = "#"
+custom_script = ""
+page_header = "images/page-header.webp"
+
+[[social]]
+title = "instagram"
+icon = "fab fa-instagram"
+link = "https://instagram.com/pikiapp"
+
+[[social]]
+title = "tiktok"
+icon = "fab fa-tiktok"
+link = "https://tiktok.com/@pikiapp"
+
+[[social]]
+title = "linkedin"
+icon = "fab fa-linkedin"
+link = "#"
+
+[preloader]
+enable = true
+
+[navigation_button]
+enable = true
+label = "Essai gratuit"
+link = "https://piki-app.com/admin/register"
+
+[cookies]
+enable = false
+expire_days = 2
+content = "Ce site utilise des cookies. En continuant, vous acceptez leur utilisation."
+button = "J'accepte"

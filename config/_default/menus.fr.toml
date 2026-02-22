@@ -1,0 +1,69 @@
+############# French navigation ##############
+
+# main menu
+[[main]]
+name = "Fonctionnalités"
+url = "features/"
+weight = 1
+
+[[main]]
+name = "Comment ça marche"
+url = "how-it-works/"
+weight = 2
+
+[[main]]
+name = "Tarif"
+url = "pricing/"
+weight = 3
+
+[[main]]
+name = "FAQ"
+url = "faq/"
+weight = 4
+
+[[main]]
+name = "Contact"
+url = "contact/"
+weight = 5
+
+
+# footer menus
+[[about]]
+name = "Fonctionnalités"
+url = "features/"
+weight = 1
+
+[[about]]
+name = "Comment ça marche"
+url = "how-it-works/"
+weight = 2
+
+[[about]]
+name = "Tarif"
+url = "pricing/"
+weight = 3
+
+[[service]]
+name = "Pré-commande"
+url = "/#pre-commande"
+weight = 1
+
+[[service]]
+name = "Commande sur place"
+url = "/#sur-place"
+weight = 2
+
+[[service]]
+name = "Livraison"
+url = "/#livraison"
+weight = 3
+
+[[help]]
+name = "FAQ"
+url = "faq/"
+weight = 1
+
+[[help]]
+name = "Contact"
+url = "contact/"
+weight = 2

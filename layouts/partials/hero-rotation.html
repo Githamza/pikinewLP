@@ -1,0 +1,38 @@
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var texts = document.querySelectorAll('.hero-rotating-text');
+  var slides = document.querySelectorAll('.hero-slide');
+  if (texts.length === 0) return;
+
+  var current = 0;
+  var paused = false;
+
+  var wrapper = document.querySelector('.hero-rotating-wrapper');
+  if (wrapper) {
+    wrapper.addEventListener('mouseenter', function() { paused = true; });
+    wrapper.addEventListener('mouseleave', function() { paused = false; });
+  }
+
+  setInterval(function() {
+    if (paused) return;
+
+    var prev = current;
+    current = (current + 1) % texts.length;
+
+    // Rotate text
+    texts[prev].classList.remove('active');
+    texts[prev].classList.add('exit-up');
+    texts[current].classList.add('active');
+
+    // Rotate image slides
+    if (slides.length > 0) {
+      slides[prev].classList.remove('active');
+      slides[current].classList.add('active');
+    }
+
+    setTimeout(function() {
+      texts[prev].classList.remove('exit-up');
+    }, 500);
+  }, 3000);
+});
+</script>

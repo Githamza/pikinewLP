@@ -1,0 +1,18 @@
+{
+  "name": "saasis-hugo",
+  "description": "saas theme for hugo",
+  "version": "3.3.2",
+  "license": "UNLICENSED",
+  "author": "gethugothemes",
+  "scripts": {
+    "dev": "hugo server",
+    "build": "hugo --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic",
+    "vercel-build": "./vercel-build.sh",
+    "preview": "hugo server --disableFastRender --navigateToChanged --templateMetrics --templateMetricsHints --watch --forceSyncStatic -e production --minify ",
+    "update-modules": "node ./scripts/clearModules.js && hugo mod clean --all && hugo mod get -u ./... && hugo mod tidy"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.2",
+    "prettier-plugin-go-template": "0.0.15"
+  }
+}
