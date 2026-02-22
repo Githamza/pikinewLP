@@ -19,6 +19,7 @@ var aosInitialized = false;
 function initAOS() {
   if (aosInitialized) return;
   aosInitialized = true;
+  document.body.classList.add("aos-initialized");
   AOS.init({
     once: true,
     anchorPlacement: "top-bottom",
