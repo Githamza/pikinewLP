@@ -14,13 +14,25 @@ jQuery.event.special.touchmove = {
   },
 };
 
-// prelaoder
-$(window).on("load", function () {
-  $(".preloader").fadeOut(10);
+// preloader + AOS initialization
+var aosInitialized = false;
+function initAOS() {
+  if (aosInitialized) return;
+  aosInitialized = true;
   AOS.init({
     once: true,
     anchorPlacement: "top-bottom",
   });
+}
+
+$(window).on("load", function () {
+  $(".preloader").fadeOut(10);
+  initAOS();
+});
+
+// Fallback: initialize AOS after DOM is ready even if window.load is delayed
+$(document).ready(function () {
+  setTimeout(initAOS, 1000);
 });
 
 $(document).ready(function () {
