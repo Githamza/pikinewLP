@@ -25,6 +25,50 @@
 {{ $scripts := $scripts | resources.Concat "/js/script.js" | minify | fingerprint "sha512" }}
 <script crossorigin="anonymous" defer="defer" data-turbolinks-suppress-warning integrity="{{ $scripts.Data.Integrity }}" type="application/javascript">{{$scripts.Content | safeJS}}</script>
 
+<!-- mobile burger menu toggle (standalone — does not depend on Bootstrap data-api) -->
+<script>
+(function(){
+  var btn=document.getElementById('navbar-toggler');
+  var nav=document.getElementById('navigation');
+  if(!btn||!nav)return;
+  btn.addEventListener('click',function(){
+    var isOpen=nav.classList.contains('show');
+    if(isOpen){
+      nav.style.height=nav.scrollHeight+'px';
+      nav.offsetHeight;/* force reflow */
+      nav.classList.add('collapsing');
+      nav.classList.remove('collapse','show');
+      nav.style.height='';
+      btn.classList.add('collapsed');
+      btn.setAttribute('aria-expanded','false');
+      var onEnd=function(){
+        nav.removeEventListener('transitionend',onEnd);
+        nav.classList.remove('collapsing');
+        nav.classList.add('collapse');
+      };
+      nav.addEventListener('transitionend',onEnd);
+      setTimeout(onEnd,350);/* fallback if transitionend does not fire */
+    }else{
+      nav.classList.remove('collapse');
+      nav.classList.add('collapsing');
+      nav.style.height='0';
+      nav.offsetHeight;/* force reflow */
+      nav.style.height=nav.scrollHeight+'px';
+      btn.classList.remove('collapsed');
+      btn.setAttribute('aria-expanded','true');
+      var onEnd2=function(){
+        nav.removeEventListener('transitionend',onEnd2);
+        nav.classList.remove('collapsing');
+        nav.classList.add('collapse','show');
+        nav.style.height='';
+      };
+      nav.addEventListener('transitionend',onEnd2);
+      setTimeout(onEnd2,350);/* fallback */
+    }
+  });
+})();
+</script>
+
 <!-- cookie -->
 {{ with site.Params.cookies }}
 {{ if .enable }}

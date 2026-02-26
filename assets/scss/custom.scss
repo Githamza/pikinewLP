@@ -282,6 +282,16 @@ body.aos-initialized [data-aos] {
   font-size: 0.95rem;
 }
 
+/* Mobile navbar: solid background when expanded */
+@media (max-width: 1199.98px) {
+  .navigation .navbar-collapse {
+    background: $white;
+    padding: 1rem;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+}
+
 /* FAQ Accordion overrides */
 .faq .accordion-item {
   margin-bottom: 0.75rem;
