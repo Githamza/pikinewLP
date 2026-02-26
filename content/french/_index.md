@@ -32,12 +32,15 @@ use_cases:
   items:
     - icon: "🌅"
       title: "Pré-commande"
+      id: "pre-commande"
       description: "Vos clients commandent le matin, vous préparez sereinement. À l'ouverture, tout est prêt. Zéro stress, zéro file d'attente."
     - icon: "🏪"
       title: "Commande sur place"
+      id: "sur-place"
       description: "Un QR code sur chaque table. Vos clients consultent le menu, commandent et paient depuis leur téléphone. Plus besoin de faire la queue."
     - icon: "🛵"
       title: "Livraison"
+      id: "livraison"
       description: "Livrez avec Uber Direct ou vos propres livreurs via Shipday. Tracking en temps réel pour vos clients. Zéro intermédiaire."
 
 ############################ Pain Points ##################################
