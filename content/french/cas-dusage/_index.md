@@ -1,0 +1,36 @@
+---
+title: "Cas d'usage"
+description: "Découvrez comment Piki s'adapte à votre activité. Pré-commande, commande sur place, livraison — chaque restaurant y trouve son compte."
+heading: "Piki s'adapte à votre réalité"
+subtitle: "Que vous gériez un restaurant du midi, un food truck, une boulangerie ou une dark kitchen, Piki vous aide à recevoir plus de commandes, sans commission."
+
+use_cases:
+  - title: "Restaurant du midi"
+    slug: "restaurant-du-midi"
+    icon: "🍽️"
+    summary: "Recevez les commandes le matin, préparez sereinement, servez sans stress. Le rush du midi, c'est fini."
+  - title: "Boulangerie & Pâtisserie"
+    slug: "boulangerie-patisserie"
+    icon: "🥐"
+    summary: "Vos clients réservent pains et gâteaux en avance. Moins de gaspillage, plus de satisfaction."
+  - title: "Food Truck"
+    slug: "food-truck"
+    icon: "🚚"
+    summary: "Partagez votre lien de commande sur les réseaux. Vos clients commandent avant d'arriver, vous servez à la chaîne."
+  - title: "Bar & Restaurant avec terrasse"
+    slug: "bar-restaurant-terrasse"
+    icon: "🍹"
+    summary: "Un QR code sur chaque table. Vos clients commandent et paient sans attendre le serveur."
+  - title: "Dark Kitchen"
+    slug: "dark-kitchen"
+    icon: "👨‍🍳"
+    summary: "Votre propre canal de commande en ligne. Gardez 100% de vos marges, sans dépendre des plateformes."
+  - title: "Traiteur & Événementiel"
+    slug: "traiteur-evenementiel"
+    icon: "🎉"
+    summary: "Prenez les commandes pour plateaux-repas, buffets et événements. Organisez vos préparations à l'avance."
+
+cta:
+  label: "Essayez Piki gratuitement"
+  link: "https://piki-app.com/admin/register"
+---

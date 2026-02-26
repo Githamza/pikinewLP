@@ -282,6 +282,90 @@ body.aos-initialized [data-aos] {
   font-size: 0.95rem;
 }
 
+/* ==================== USE CASES PAGES ==================== */
+
+/* Listing page cards */
+.uc-listing-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    .btn-outline-primary {
+      background: $primary-color;
+      color: $white;
+    }
+  }
+
+  .uc-listing-icon {
+    font-size: 3rem;
+  }
+}
+
+/* Single use case page */
+.uc-page-icon {
+  font-size: 3.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* Problem section */
+.uc-problem-section {
+  background: $light;
+  padding: 60px 0;
+}
+
+.uc-problem-item {
+  background: $white;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateX(5px);
+  }
+
+  .uc-problem-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+    margin-top: 2px;
+  }
+}
+
+/* Solution cards */
+.uc-solution-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  }
+
+  .uc-solution-icon {
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: lighten($primary-color, 30%);
+    border-radius: 12px;
+  }
+}
+
+/* Testimonial block */
+.uc-testimonial {
+  background: linear-gradient(135deg, lighten($primary-color, 32%), lighten($primary-color, 28%));
+  border-left: 4px solid $primary-color;
+
+  blockquote p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: darken($primary-color, 20%);
+  }
+}
+
 /* FAQ Accordion overrides */
 .faq .accordion-item {
   margin-bottom: 0.75rem;
