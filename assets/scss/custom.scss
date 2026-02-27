@@ -294,6 +294,7 @@ section:last-of-type {
 
 /* ==================== ACCESSIBILITY: CONTRAST FIXES ==================== */
 /* Override primary-colored text on light backgrounds for WCAG AA (4.5:1) */
+/* $primary-color (#FF6B35) has only 3.22:1 contrast on white — use #C05300 (4.65:1) */
 .section-title .caption {
   color: $primary-color-text;
 }
@@ -304,4 +305,35 @@ section:last-of-type {
 
 .pricing-piki .pricing-amount .h3 {
   color: $primary-color-text;
+}
+
+/* Navigation: active & hover states must meet WCAG AA */
+.navigation .navbar-light .navbar-nav .nav-item.active .nav-link:not(select),
+.navigation .navbar-light .navbar-nav .nav-item .dropdown-toggle.active {
+  color: $primary-color-text;
+}
+
+.navigation .navbar-light .navbar-nav .nav-link:not(select):hover {
+  color: $primary-color-text;
+}
+
+/* General link hover color */
+a:hover {
+  color: $primary-color-text;
+}
+
+/* Ensure main-content background is opaque enough for text contrast */
+.main-content {
+  background-color: rgba($white, 0.92);
+}
+
+/* Make inline links distinguishable (not just by color) */
+main a:not(.btn):not(.nav-link):not(.navbar-brand):not(.dropdown-item):not(.text-dark) {
+  text-decoration: underline;
+  text-decoration-color: $primary-color-text;
+  text-underline-offset: 2px;
+
+  &:hover {
+    color: $primary-color-text;
+  }
 }
