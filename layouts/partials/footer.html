@@ -71,7 +71,7 @@
       <div class="col-xxl-2 col-xl-3 mb-0 mb-xl-4">
         <ul class="list-unstyled list-inline mb-0 text-start text-xl-end">
           {{range site.Params.social }}
-          <li class="list-inline-item me-3"><a class="text-dark" href="{{ .link }}" aria-label="social profile"><i class="{{ .icon }}"></i></a></li>
+          <li class="list-inline-item me-3"><a class="text-dark" href="{{ .link }}" aria-label="{{ .title }}"><i class="{{ .icon }}"></i></a></li>
           {{end}}
         </ul>
       </div>

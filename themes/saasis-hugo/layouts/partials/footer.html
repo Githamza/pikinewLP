@@ -56,7 +56,7 @@
 
     <div class="row justify-content-between align-items-end mt-3">
       <div class="col-xl-4 col-lg-6 mb-4 mb-xl-0">
-        <h5>{{i18n `subscribe_newsletter`}}</h5>
+        <h4 class="h5">{{i18n `subscribe_newsletter`}}</h4>
         <form action="{{site.Params.newsletter_form_action}}" class="mt-4">
           <div class="input-group border p-2 rounded-sm">
             <input type="text" class="form-control shadow-none rounded-sm bg-transparent border-0 text-dark" placeholder="{{ i18n `email_address` }}" aria-label="Email Address" aria-describedby="email-address">
@@ -70,7 +70,7 @@
       <div class="col-xxl-2 col-xl-3 mb-0 mb-xl-4">
         <ul class="list-unstyled list-inline mb-0 text-start text-xl-end">
           {{range site.Params.social }}
-          <li class="list-inline-item me-3"><a class="text-dark" href="{{ .link }}" aria-label="social profile"><i class="{{ .icon }}"></i></a></li>
+          <li class="list-inline-item me-3"><a class="text-dark" href="{{ .link }}" aria-label="{{ .title }}"><i class="{{ .icon }}"></i></a></li>
           {{end}}
         </ul>
       </div>
