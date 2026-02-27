@@ -1,10 +1,8 @@
-<!-- font family (loaded via <link> in head for faster FCP — no JS needed) -->
+<!-- Google Fonts (preload already in <head>, async stylesheet here) -->
 {{$pf:= site.Params.variables.primary_font | default "Poppins:wght@400;500;600;700"}}
 {{$sf:= site.Params.variables.secondary_font}}
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family={{$pf}}&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family={{$pf}}&display=swap" media="print" onload="this.media='all'">
 {{with $sf}}
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family={{.}}&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family={{.}}&display=swap" media="print" onload="this.media='all'">
 {{end}}
 <noscript>
