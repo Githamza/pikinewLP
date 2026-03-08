@@ -1,100 +1,100 @@
 ---
 title : "Comment ça fonctionne"
-description : "this is meta description"
+description : "Decouvrez comment Piki aide votre restaurant a vendre en direct, sans commission."
 layout : "how-it-works"
 draft : false
 
 # work_process
 work_process:
   enable: true
-  title: "Comment Saasis fonctionne-t-il vraiment ?"
-  subtitle: "Work Process"
-  content: "Lorem ipsum dolor amet, consectetur adipwrgv wiscin Diam ut id nisl  rhoncus, imperet coquat ornsda"
+  title: "Comment Piki fonctionne au quotidien"
+  subtitle: "Le parcours Piki"
+  content: "Piki vous aide a centraliser vos commandes en avance, sur place et en livraison dans une seule boutique, a votre image et sans intermediaire."
 
   tablist:
-  - title: "Pour les utilisateurs réguliers"
+  - title: "Mettre en place Piki"
     tablist_item:
-    - subtitle: "Why customer retention is the ultimate Of growth"
-      description: "Lorem ipsum dolor, consetur lectus vehicula eget ante. Neque non tristique tincidunt quam commodo"
+    - subtitle: "Creez votre boutique"
+      description: "Ajoutez votre menu, vos categories, vos visuels et votre identite de marque pour proposer une experience coherente avec votre restaurant."
       image: "images/work-process/01.webp"
 
-    - subtitle: "Accross All Your Mobile App And Web Applications"
-      description: "Lorem ipsum dolor, consetur lectus vehicula eget ante. Neque non tristique tincidunt quam commodo"
+    - subtitle: "Choisissez vos modes de commande"
+      description: "Activez la pre-commande, la commande sur place par QR code et la livraison selon votre organisation."
       image: "images/work-process/02.webp"
 
-    - subtitle: "How to Be  build the ultimate tech stack for growth"
-      description: "Lorem ipsum dolor, consetur lectus vehicula eget ante. Neque non tristique tincidunt quam commodo"
+    - subtitle: "Partagez votre lien de commande"
+      description: "Diffusez votre boutique sur vos supports: QR code, comptoir, reseaux sociaux, site web ou communication imprimee."
       image: "images/work-process/03.webp"
 
-    - subtitle: "Accross All Your Mobile App And Web Applications"
-      description: "Lorem ipsum dolor, consetur lectus vehicula eget ante. Neque non tristique tincidunt quam commodo"
+    - subtitle: "Commencez a vendre en direct"
+      description: "Vos clients commandent chez vous, sous votre marque, avec un parcours plus fluide et plus rentable."
       image: "images/work-process/02.webp"
 
-  - title: "For Basic Users"
+  - title: "Gerer le service"
     tablist_item:
-    - subtitle: "Accross All Your Mobile App And Web Applications"
-      description: "Lorem ipsum dolor, consetur lectus vehicula eget ante. Neque non tristique tincidunt quam commodo"
+    - subtitle: "Recevez les commandes en temps reel"
+      description: "Les commandes arrivent directement dans votre environnement Piki pour un traitement simple et rapide."
       image: "images/work-process/02.webp"
 
-    - subtitle: "Why customer retention is the ultimate Of growth"
-      description: "Lorem ipsum dolor, consetur lectus vehicula eget ante. Neque non tristique tincidunt quam commodo"
+    - subtitle: "Preparez avec plus de visibilite"
+      description: "La pre-commande vous aide a mieux anticiper les volumes, le QR code reduit les points de friction et la livraison reste structuree."
       image: "images/work-process/01.webp"
 
-    - subtitle: "How to Be  build the ultimate tech stack for growth"
-      description: "Lorem ipsum dolor, consetur lectus vehicula eget ante. Neque non tristique tincidunt quam commodo"
+    - subtitle: "Encaissez en direct"
+      description: "Les paiements sont securises et vous gardez 100% de vos ventes sans commission sur les commandes."
       image: "images/work-process/03.webp"
 
-  - title: "For Heavy Users"
+  - title: "Developper votre autonomie"
     tablist_item:
-    - subtitle: "How to Be  build the ultimate tech stack for growth"
-      description: "Lorem ipsum dolor, consetur lectus vehicula eget ante. Neque non tristique tincidunt quam commodo"
+    - subtitle: "Vendez sous votre propre marque"
+      description: "Votre restaurant reste au centre de l'experience, au lieu d'etre noye dans une plateforme parmi des dizaines d'autres."
       image: "images/work-process/03.webp"
 
-    - subtitle: "Why customer retention is the ultimate Of growth"
-      description: "Lorem ipsum dolor, consetur lectus vehicula eget ante. Neque non tristique tincidunt quam commodo"
+    - subtitle: "Gardez la relation client"
+      description: "Vos clients commandent chez vous, pas via un intermediaire qui controle la visibilite et la fidelite."
       image: "images/work-process/01.webp"
 
-    - subtitle: "Accross All Your Mobile App And Web Applications"
-      description: "Lorem ipsum dolor, consetur lectus vehicula eget ante. Neque non tristique tincidunt quam commodo"
+    - subtitle: "Construisez un modele plus rentable"
+      description: "Avec un prix fixe et une vente directe, vous protegez mieux vos marges et reprenez le controle de votre activite."
       image: "images/work-process/02.webp"
 
-    - subtitle: "How to Be  build the ultimate tech stack for growth"
-      description: "Lorem ipsum dolor, consetur lectus vehicula eget ante. Neque non tristique tincidunt quam commodo"
+    - subtitle: "Pilotez plus sereinement"
+      description: "Piki vous aide a transformer la commande digitale en un canal simple, previsible et durable pour votre restaurant."
       image: "images/work-process/03.webp"
 
 
 # working_steps
 working_steps:
   enable: true
-  title: "Always Belive In Better Build"
-  subtitle: "Working Steps"
-  content: "Lorem ipsum dolor, consectetur adipiscing elit. Convallis cursus ac orci diam, facilisis. Quis et pulvinar nec praesent qum magna amet. Magna blandit sodales, aenean rhoncus"
+  title: "Un fonctionnement simple, du premier clic au service"
+  subtitle: "Les etapes cles"
+  content: "Piki est concu pour aider les restaurants a vendre en direct sans complexifier l'operationnel."
 
   step_one:
-    title: "We have To designing develop websites"
-    subtitle: "Built to convert"
-    content: "Lorem ipsum dolor amet, consectetur adipisacing elit. Nibh sem tellus turpis lectus eu vehicula eget ante. Neque non tristique tincidunt quam commodo, inas consectetur pellen tesrfgb srgbw ssqs dvgsue."
+    title: "Mettez votre offre en ligne"
+    subtitle: "Votre boutique"
+    content: "Creez une boutique a vos couleurs, ajoutez votre carte et preparez un parcours de commande clair pour vos clients."
     
     process:
-    - name: "Client Projects"
+    - name: "Menu"
       image: "images/features/02.webp"
-    - name: "Digital Analytics"
+    - name: "Categories"
       image: "images/features/03.webp"
-    - name: "Creative Ideas"
+    - name: "Visuels"
       image: "images/features/04.webp"
-    - name: "Analytics Toolbox"
+    - name: "Identite"
       image: "images/features/05.webp"
 
   step_two:
-    title: "Saais is a high convert template In the saaS"
-    subtitle: "drives growth"
-    content: "Lorem ipsum dolor sit amet, consectetur adipisacing elit. Nibh sem tellus turpis lectus eu vehicula eget ante. Neque non tristique tincidunt quam commodo, inas consectetur pellen tesrfgb srgbw ssqs dvgsue."
+    title: "Activez les modes de commande utiles a votre restaurant"
+    subtitle: "Pre-commande, sur place, livraison"
+    content: "Choisissez les parcours adaptes a votre activite: commande en avance pour mieux preparer, QR code pour fluidifier le service, livraison pour vendre en direct au-dela du restaurant."
     image: "images/growth.webp"
 
   step_three:
-    title: "We agonize over the details a make sure"
-    subtitle: "Convert traffic"
-    content: "Lorem ipsum dolor amet, consectetur adipisacing elit. Nibh sem tellus turpis lectus eu vehicula eget ante. Neque non tristique tincidunt quam commodo, inas consectetur pellen tesrfgb srgbw ssqs dvgsue."
+    title: "Recevez, servez, encaissez"
+    subtitle: "Une vente directe plus fluide"
+    content: "Les commandes arrivent chez vous, les paiements sont securises et vous gardez la maitrise de votre service, de votre image et de votre marge."
     image: "images/feature-image-4.webp"
 
 

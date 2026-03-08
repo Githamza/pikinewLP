@@ -1,6 +1,6 @@
 ---
-title: "Tarif"
-heading: "Un prix simple, sans surprise"
+title: "Tarifs"
+heading: "Un prix simple pour vendre en direct"
 layout: "pricing"
 draft: false
 
@@ -9,12 +9,13 @@ pricing:
   price: "49€"
   per: "/mois"
   features_list:
-    - "Boutique en ligne personnalisée"
-    - "Pré-commande & click and collect"
-    - "Menu QR code sur place"
-    - "Livraison via Uber Direct"
-    - "Dashboard & statistiques"
-    - "Paiement sécurisé (CB, Apple Pay, Google Pay)"
     - "0% de commission sur vos ventes"
+    - "Boutique en ligne a votre image"
+    - "Pre-commande"
+    - "Commande sur place par QR code"
+    - "Livraison via Uber Direct"
+    - "Gestion de vos propres livreurs"
+    - "Paiement securise"
+    - "Suivi des commandes et des ventes"
     - "Support par email"
 ---
