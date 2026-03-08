@@ -7,11 +7,12 @@ import threading
 import urllib.parse
 import urllib.request
 import webbrowser
+import os
 import sys
 import time
 
-CLIENT_ID = "376940869814-5acp7sa75j68dpcljnok80mbn3jb0gmf.apps.googleusercontent.com"
-CLIENT_SECRET = "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"
+CLIENT_ID = os.environ.get("GSC_CLIENT_ID", "")
+CLIENT_SECRET = os.environ.get("GSC_CLIENT_SECRET", "")
 REDIRECT_URI = "http://localhost:8085"
 SCOPE = "https://www.googleapis.com/auth/webmasters.readonly"
 
