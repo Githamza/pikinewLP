@@ -1,0 +1,55 @@
+{{ define "main" }}
+
+<main>
+  <!-- Use Cases Hero -->
+  <section class="section pb-0" data-aos="fade">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <div class="section-title">
+            <p class="caption">{{ .Title }}</p>
+            <h2 class="mb-3">{{ .Params.heading | markdownify }}</h2>
+            <p class="lead">{{ .Params.subtitle }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases Grid -->
+  <section class="section pt-0" data-aos="fade-up">
+    <div class="container">
+      <div class="row g-4 justify-content-center">
+        {{ range .Params.use_cases }}
+        <div class="col-lg-4 col-md-6">
+          <a href="{{ $.RelPermalink }}{{ .slug }}/" class="text-decoration-none">
+            <div class="uc-listing-card rounded-sm border bg-white-blur p-4 text-center h-100">
+              <div class="uc-listing-icon mb-3">{{ .icon }}</div>
+              <h3 class="h5 mb-2 text-dark">{{ .title }}</h3>
+              <p class="mb-3 text-muted">{{ .summary }}</p>
+              <span class="btn btn-outline-primary btn-sm">Découvrir</span>
+            </div>
+          </a>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  {{ with .Params.cta }}
+  <section class="section-bordered-even" data-aos="fade-up">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="mb-3">Prêt à simplifier votre quotidien ?</h2>
+          <p class="lead mb-4">Créez votre boutique en 1 minute. 0% de commission. Annulez à tout moment.</p>
+          <a href="{{ .link }}" class="btn btn-primary btn-lg px-5">{{ .label }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ end }}
+</main>
+
+{{ end }}

@@ -1,0 +1,150 @@
+{{ define "main" }}
+
+<main>
+  <!-- Hero -->
+  {{ with .Params.hero }}
+  <section class="section pb-0" data-aos="fade">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <div class="section-title">
+            <span class="uc-page-icon">{{ $.Params.icon }}</span>
+            <h1 class="mb-3">{{ .headline | markdownify }}</h1>
+            <p class="lead">{{ .subheadline }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- Problem Section -->
+  {{ with .Params.problem }}
+  <section class="uc-problem-section" data-aos="fade">
+    <div class="container">
+      <div class="row justify-content-center mb-4">
+        <div class="col-lg-8 text-center">
+          <h2>{{ .title }}</h2>
+        </div>
+      </div>
+      <div class="row g-3 justify-content-center">
+        {{ range .items }}
+        <div class="col-lg-6">
+          <div class="uc-problem-item d-flex align-items-start p-3 rounded">
+            <span class="uc-problem-icon me-3 flex-shrink-0">{{ .icon }}</span>
+            <p class="mb-0">{{ .text }}</p>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- Solution Section -->
+  {{ with .Params.solution }}
+  <section class="section-bordered-even" data-aos="fade">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-8 text-center">
+          <div class="section-title">
+            <h2>{{ .title }}</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row g-4 justify-content-center">
+        {{ range .items }}
+        <div class="col-lg-6 col-md-6">
+          <div class="uc-solution-card rounded-sm border bg-white-blur p-4 d-flex align-items-start h-100">
+            <div class="uc-solution-icon me-3 flex-shrink-0">{{ .icon }}</div>
+            <div>
+              <h3 class="h5 mb-2">{{ .title }}</h3>
+              <p class="mb-0 text-muted">{{ .text }}</p>
+            </div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- Scenario / Timeline Section -->
+  {{ with .Params.scenario }}
+  <section data-aos="fade">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-8 text-center">
+          <div class="section-title">
+            <h2>{{ .title }}</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="timeline-container">
+            {{ range .steps }}
+            <div class="timeline-item d-flex mb-4">
+              <div class="timeline-marker flex-shrink-0">
+                <span class="timeline-time">{{ .time }}</span>
+              </div>
+              <div class="timeline-content ms-4">
+                <p class="mb-0">{{ .text }}</p>
+              </div>
+            </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- Testimonial Section -->
+  {{ with .Params.testimonial }}
+  <section class="section-bordered-even" data-aos="fade-up">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-7 text-center">
+          <div class="uc-testimonial p-4 p-lg-5 rounded-sm">
+            <blockquote class="mb-3">
+              <p class="lead fst-italic">"{{ .quote }}"</p>
+            </blockquote>
+            <p class="mb-0 fw-bold text-muted">— {{ .author }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- CTA Section -->
+  {{ with .Params.cta }}
+  <section data-aos="fade-up">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="mb-3">{{ .text }}</h2>
+          <p class="lead mb-4">0% de commission. Votre boutique en ligne en 1 minute.</p>
+          <a href="{{ .link }}" class="btn btn-primary btn-lg px-5">{{ .label }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- Back Link -->
+  <section class="pb-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <a href="{{ "cas-dusage/" | relLangURL }}" class="btn btn-outline-secondary">
+            <i class="fas fa-arrow-left me-2"></i>Tous les cas d'usage
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{{ end }}

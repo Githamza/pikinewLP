@@ -7,9 +7,14 @@ url = "features/"
 weight = 1
 
 [[main]]
+name = "Cas d'usage"
+url = "cas-dusage/"
+weight = 2
+
+[[main]]
 name = "Comment ça marche"
 url = "how-it-works/"
-weight = 2
+weight = 3
 
 [[main]]
 name = "Cas d'usages"
@@ -39,14 +44,19 @@ url = "features/"
 weight = 1
 
 [[about]]
+name = "Cas d'usage"
+url = "cas-dusage/"
+weight = 2
+
+[[about]]
 name = "Comment ça marche"
 url = "how-it-works/"
-weight = 2
+weight = 3
 
 [[about]]
 name = "Tarif"
 url = "pricing/"
-weight = 3
+weight = 4
 
 [[service]]
 name = "Pré-commande"
