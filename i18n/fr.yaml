@@ -1,3 +1,6 @@
+- id: language
+  translation: Choisir la langue
+
 - id: home
   translation: Accueil
 

@@ -6,8 +6,8 @@
       {{ range .Params.pricing }}
       <div class="col-xl-3 col-md-6">
         <div class="rounded-sm border bg-white-blur py-5 px-4">
-          <h3 class="h6 mb-2">{{.name}}</h3>
-          <h4 class="h3 mb-4">{{.price}}{{ with .per }}<small class="h6 fw-light">{{.}}</small>{{ end }}</h4>
+          <h2 class="h6 mb-2">{{.name}}</h2>
+          <p class="h3 mb-4">{{.price}}{{ with .per }}<small class="h6 fw-light">{{.}}</small>{{ end }}</p>
           <ul class="check-list mb-4">
             {{ range .features_list }}
             <li>{{.}}</li>
