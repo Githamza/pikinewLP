@@ -1,6 +1,6 @@
 [build]
-  publish = "exampleSite/public"
-  command = "cd exampleSite && hugo --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic --themesDir ../.."
+  publish = "public"
+  command = "hugo --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic"
   
 [build.environment]
   HUGO_VERSION = "0.147.6"

@@ -41,3 +41,27 @@ enable = false
 expire_days = 2
 content = "Ce site utilise des cookies. En continuant, vous acceptez leur utilisation."
 button = "J'accepte"
+
+############################# Plugins ##############################
+
+# CSS Plugins
+[[plugins.css]]
+link = "plugins/slick/slick.css"
+[[plugins.css]]
+link = "plugins/aos/aos.css"
+[[plugins.css]]
+link = "plugins/font-awesome/fontawesome.min.css"
+[[plugins.css]]
+link = "plugins/font-awesome/brands.css"
+[[plugins.css]]
+link = "plugins/font-awesome/solid.css"
+
+# JS Plugins
+[[plugins.js]]
+link = "plugins/jquery/jquery.min.js"
+[[plugins.js]]
+link = "plugins/bootstrap/bootstrap.min.js"
+[[plugins.js]]
+link = "plugins/slick/slick.min.js"
+[[plugins.js]]
+link = "plugins/aos/aos.js"
