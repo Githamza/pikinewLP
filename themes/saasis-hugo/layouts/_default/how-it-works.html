@@ -68,19 +68,10 @@
           <p>{{ .content | markdownify }}</p>
         </div>
       </div>
-      <div class="col-lg-5" data-aos="fade-up" data-aos-delay="150">
-        <div class="row g-4">
-          {{ range .process }}
-          <div class="col-sm-6">
-            <div class="rounded-sm border bg-white-blur p-4 text-center">
-              {{$img:= resources.Get (.image) }}
-              {{$img:= $img.Resize "50x webp"}}
-              <img loading="lazy" decoding="async" class="img-fluid mb-3" src="{{$img.RelPermalink}}" alt="features image" width="{{$img.Width}}" height="{{$img.Height}}" data-aos="cool">
-              <h3 class="h5 mb-0">Client Projects</h3>
-            </div>
-          </div>
-          {{ end }}
-        </div>
+      <div class="col-lg-5 text-center" data-aos="fade-up" data-aos-delay="150">
+        {{$img:= resources.Get (.image) }}
+        {{$img:= $img.Resize "450x webp"}}
+        <img loading="lazy" decoding="async" class="img-fluid" src="{{$img.RelPermalink}}" alt="{{ .title }}" width="{{$img.Width}}" height="{{$img.Height}}">
       </div>
     </div>
     {{ end }}
