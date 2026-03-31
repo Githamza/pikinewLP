@@ -1,9 +1,9 @@
 ---
 title: Blog
-heading: Articles les plus populaires
+heading: Nos derniers articles
 homepage_post: "3"
 button:
-  label: Voir plus de messages
+  label: Voir tous les articles
   link: blog/
 
 ---

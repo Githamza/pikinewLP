@@ -1,23 +1,35 @@
 ---
-title: "Banana is the best meal packages in the UK spark outrage online"
-description: "meta description"
+title: "Pré-commande restaurant : boostez votre service du midi"
+description: "La pré-commande permet aux restaurants d'optimiser le service du midi et d'augmenter leur chiffre d'affaires. Voici comment."
 images:
-  - "images/blogs/05.webp"
-date: 2021-01-25T16:56:47+06:00
+  - "images/blogs/04.webp"
+date: 2025-01-20T11:00:00+01:00
+tags: ["Pré-commande", "Service midi"]
+categories: ["Gestion"]
 draft: false
-tags: ["Food", "Gold"]
-categories: ["Food"]
 ---
 
-A banana is an elongated, edible fruit – botanically a berry – produced by several kinds of large herbaceous flowering plants in the genus Musa. In some countries, bananas used for cooking may be called "plantains", distinguishing them from dessert bananas.
+Le service du midi est un défi pour de nombreux restaurateurs. Les clients pressés veulent manger rapidement, et chaque minute compte. La pré-commande est la solution idéale pour transformer cette contrainte en opportunité.
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
+### Le principe est simple
 
-### Creative Design
-Nam ut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat. Integer eu ipsum sem. Ut bibendum lacus vestibulum maximus suscipit. Quisque vitae nibh iaculis neque blandit euismod.
+Le client commande à l'avance depuis son téléphone -- le matin, la veille ou même quelques heures avant. Il choisit un créneau de retrait, et quand il arrive au restaurant, sa commande est prête. Pas d'attente, pas de file, tout le monde y gagne.
 
->Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
->
-> <cite>Benjamin Franklin</cite>
+### Les bénéfices concrets
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
+**Pour le restaurateur :**
+- Vous connaissez vos commandes à l'avance et pouvez mieux gérer vos stocks
+- Vous lissez les pics d'activité du midi
+- Vous augmentez le nombre de clients servis sans augmenter votre capacité d'accueil
+- Le panier moyen des pré-commandes est souvent 15 % plus élevé que celui des commandes sur place
+
+**Pour le client :**
+- Zéro attente, un gain de temps précieux pendant la pause déjeuner
+- La certitude que son plat sera disponible
+- Un paiement en ligne rapide et sécurisé
+
+### Un cas concret
+
+Un restaurant à Lyon proposant des bowls a mis en place la pré-commande avec Piki. En un mois, le nombre de commandes du midi a augmenté de 35 %, sans embaucher de personnel supplémentaire. Le secret : les clients qui n'avaient pas le temps de faire la queue sont revenus.
+
+La pré-commande n'est pas réservée aux grandes chaînes. Avec les bons outils, tout restaurant peut la mettre en place facilement et rapidement.

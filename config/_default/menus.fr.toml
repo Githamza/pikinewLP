@@ -27,9 +27,14 @@ url = "faq/"
 weight = 5
 
 [[main]]
+name = "Blog"
+url = "blog/"
+weight = 6
+
+[[main]]
 name = "Contact"
 url = "contact/"
-weight = 6
+weight = 7
 
 
 # footer menus
