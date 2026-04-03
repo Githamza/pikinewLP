@@ -2,7 +2,7 @@
 title: "0 % de commission : pourquoi c'est important pour votre restaurant"
 description: "Comprendre l'impact des commissions des plateformes de livraison sur la rentabilité de votre restaurant."
 images:
-  - "images/blogs/02.webp"
+  - "images/blogs/no_fees.webp"
 date: 2025-02-28T09:00:00+01:00
 tags: ["Commission", "Rentabilité"]
 categories: ["Gestion"]
