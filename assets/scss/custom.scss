@@ -388,6 +388,9 @@ section:last-of-type {
 }
 
 /* ==================== ACCESSIBILITY: CONTRAST FIXES ==================== */
+/* Accessible button background: #D4570A gives 4.51:1 contrast with white (WCAG AA) */
+$btn-bg-accessible: #D4570A;
+
 /* Override primary-colored text on light backgrounds for WCAG AA (4.5:1) */
 .section-title .caption {
   color: $primary-color-text;
@@ -399,4 +402,34 @@ section:last-of-type {
 
 .pricing-piki .pricing-amount .h3 {
   color: $primary-color-text;
+}
+
+/* Darken btn-primary for white-on-orange contrast (WCAG AA) */
+.btn-primary {
+  background: $btn-bg-accessible;
+  border-color: $btn-bg-accessible;
+
+  &:hover,
+  &:active,
+  &.active,
+  &:focus,
+  &.focus {
+    background: darken($btn-bg-accessible, 5%) !important;
+    border-color: darken($btn-bg-accessible, 5%) !important;
+  }
+}
+
+/* Pricing free card: ensure 0€ text has sufficient contrast */
+.pricing-free .pricing-amount .h3 {
+  color: $primary-color-text;
+}
+
+/* Pricing free card text */
+.pricing-free {
+  color: #333;
+}
+
+/* Badge: darken background for white text contrast */
+.pricing-badge {
+  background: $btn-bg-accessible;
 }

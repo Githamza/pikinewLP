@@ -33,7 +33,7 @@
                 {{ $main := resources.Get .image }}
                 {{ if $main }}
                 {{ $main = $main.Resize "420x webp" }}
-                <img loading="{{ if eq $i 0 }}eager{{ else }}lazy{{ end }}" decoding="async" class="character jumping img-fluid" src="{{ $main.RelPermalink }}" alt="{{ .alt }}" width="{{ $main.Width }}" height="{{ $main.Height }}">
+                <img loading="{{ if eq $i 0 }}eager{{ else }}lazy{{ end }}" {{ if eq $i 0 }}fetchpriority="high"{{ end }} decoding="async" class="character jumping img-fluid" src="{{ $main.RelPermalink }}" alt="{{ .alt }}" width="{{ $main.Width }}" height="{{ $main.Height }}">
                 {{ end }}
 
                 {{ with .decoration_1 }}
