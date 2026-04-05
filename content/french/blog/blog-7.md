@@ -2,7 +2,7 @@
 title: "Livraison vs click & collect : quel modèle choisir pour votre restaurant ?"
 description: "Comparaison des modèles de livraison et click & collect pour aider les restaurateurs à faire le bon choix."
 images:
-  - "images/blogs/04.webp"
+  - "images/blogs/clickncollectvsdelivery.webp"
 date: 2024-11-28T15:00:00+01:00
 tags: ["Livraison", "Click & Collect"]
 categories: ["Gestion"]

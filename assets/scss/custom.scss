@@ -324,6 +324,15 @@ body.aos-initialized [data-aos] {
   }
 }
 
+.pricing-free {
+  background: $white;
+  border-style: dashed !important;
+
+  .pricing-amount .h3 {
+    color: $primary-color;
+  }
+}
+
 .pricing-competitor {
   background: $light;
   opacity: 0.85;

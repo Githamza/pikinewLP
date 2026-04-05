@@ -213,27 +213,27 @@
         </div>
       </div>
       <div class="row g-4 justify-content-center">
-        {{/* Competitor card */}}
-        <div class="col-lg-5 col-md-6">
-          <div class="pricing-card pricing-competitor rounded-sm border p-4 p-lg-5 h-100">
-            <h3 class="h5 mb-3">{{ .competitor.name }}</h3>
-            <div class="pricing-amount mb-3">
-              <span class="h3">{{ .competitor.commission }}</span>
-              <small class="text-muted">{{ .competitor.commission_label }}</small>
+        {{/* Free trial card */}}
+        {{ with .free_trial }}
+        <div class="col-lg-4 col-md-6">
+          <div class="pricing-card pricing-free rounded-sm border p-4 p-lg-5 h-100 text-center">
+            <h3 class="h5 mb-3">{{ .name }}</h3>
+            <div class="pricing-amount mb-1">
+              <span class="h3">{{ .price }}</span>
             </div>
-            <div class="pricing-example p-3 rounded mb-4">
-              <p class="mb-0"><strong>{{ .competitor.example }}</strong></p>
-            </div>
-            <ul class="pricing-features list-unstyled">
-              {{ range .competitor.drawbacks }}
-              <li class="mb-2"><i class="fas fa-times text-danger me-2"></i>{{ . }}</li>
+            <p class="text-muted mb-3">{{ .duration }}</p>
+            <ul class="pricing-features list-unstyled text-start">
+              {{ range .benefits }}
+              <li class="mb-2"><i class="fas fa-check text-success me-2"></i>{{ . }}</li>
               {{ end }}
             </ul>
+            <a href="{{ .cta_link }}" class="btn btn-outline-primary d-block mt-4">{{ .cta_label }}</a>
           </div>
         </div>
+        {{ end }}
         {{/* Piki card */}}
-        <div class="col-lg-5 col-md-6">
-          <div class="pricing-card pricing-piki rounded-sm border border-primary p-4 p-lg-5 h-100 position-relative">
+        <div class="col-lg-4 col-md-6">
+          <div class="pricing-card pricing-piki rounded-sm border border-primary p-4 p-lg-5 h-100 position-relative text-center">
             <span class="pricing-badge">Recommandé</span>
             <h3 class="h5 mb-3">{{ .piki.name }}</h3>
             <div class="pricing-amount mb-1">
@@ -244,12 +244,30 @@
             <div class="pricing-example pricing-example-piki p-3 rounded mb-4">
               <p class="mb-0"><strong>{{ .piki.example }}</strong></p>
             </div>
-            <ul class="pricing-features list-unstyled">
+            <ul class="pricing-features list-unstyled text-start">
               {{ range .piki.benefits }}
               <li class="mb-2"><i class="fas fa-check text-success me-2"></i>{{ . }}</li>
               {{ end }}
             </ul>
             <a href="{{ .piki.cta_link }}" class="btn btn-primary d-block mt-4">{{ .piki.cta_label }}</a>
+          </div>
+        </div>
+        {{/* Competitor card */}}
+        <div class="col-lg-4 col-md-6">
+          <div class="pricing-card pricing-competitor rounded-sm border p-4 p-lg-5 h-100 text-center">
+            <h3 class="h5 mb-3">{{ .competitor.name }}</h3>
+            <div class="pricing-amount mb-3">
+              <span class="h3">{{ .competitor.commission }}</span>
+              <small class="text-muted">{{ .competitor.commission_label }}</small>
+            </div>
+            <div class="pricing-example p-3 rounded mb-4">
+              <p class="mb-0"><strong>{{ .competitor.example }}</strong></p>
+            </div>
+            <ul class="pricing-features list-unstyled text-start">
+              {{ range .competitor.drawbacks }}
+              <li class="mb-2"><i class="fas fa-times text-danger me-2"></i>{{ . }}</li>
+              {{ end }}
+            </ul>
           </div>
         </div>
       </div>

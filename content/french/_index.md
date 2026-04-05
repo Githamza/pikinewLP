@@ -118,6 +118,17 @@ timeline:
 ############################ Pricing Comparison ##################################
 pricing_comparison:
   heading: "Piki ou une marketplace ?"
+  free_trial:
+    name: "Essai gratuit"
+    price: "0€"
+    duration: "14 jours sans engagement"
+    benefits:
+      - "Acces complet a toutes les fonctionnalites"
+      - "Boutique en ligne personnalisee"
+      - "Commande sur place, a emporter et en livraison"
+      - "Tableau de bord et suivi des ventes"
+    cta_label: "Demarrer mon essai gratuit"
+    cta_link: "https://piki-app.com/admin/register"
   competitor:
     name: "Plateformes classiques"
     commission: "~30%"
