@@ -13,20 +13,6 @@ newsletter_form_action = "#"
 custom_script = ""
 page_header = "images/page-header.webp"
 
-[[social]]
-title = "instagram"
-icon = "fab fa-instagram"
-link = "https://instagram.com/pikiapp"
-
-[[social]]
-title = "tiktok"
-icon = "fab fa-tiktok"
-link = "https://tiktok.com/@pikiapp"
-
-[[social]]
-title = "linkedin"
-icon = "fab fa-linkedin"
-link = "#"
 
 [preloader]
 enable = true
