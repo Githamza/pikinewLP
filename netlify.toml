@@ -1,16 +1,9 @@
 [build]
   publish = "public"
-  command = "hugo --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic"
+  command = "hugo --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic -b $HUGO_BASEURL"
   
 [build.environment]
   HUGO_VERSION = "0.147.6"
-  HUGO_BASEURL = "/"
+  HUGO_BASEURL = "https://piki-app.fr/"
 
-[[headers]]
-  for = "/*" # This defines which paths this specific [[headers]] block will cover.
-
-[headers.values]
-  X-Frame-Options = "DENY"
-  X-XSS-Protection = "1; mode=block"
-  Referrer-Policy = "same-origin"
-  Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+# Note: Security and cache headers are handled via static/.htaccess for OVH (Apache)
