@@ -19,15 +19,19 @@ Faisons le calcul, parce que c'est là que ça pique.
 
 Vous avez un panier moyen de 25 €. La plateforme prend sa commission de 25 %. Ça fait **6,25 € prélevés sur une seule commande**. Multipliez par 200 commandes dans le mois : vous lâchez **1 250 €**. Sur un an, c'est plus de **15 000 €** qui sortent de votre caisse — pour aller directement dans la poche d'un intermédiaire.
 
-Et quand on sait que le résultat net moyen d'un restaurant tourne autour de 3 à 5 %, on comprend vite le problème. Ces commissions ne grignotent pas votre marge — elles la dévorent.
+Et encore, ça c'est juste la commission. Rajoutez les **emballages** (2 à 4 € par commande), les promotions que la plateforme vous pousse à faire pour rester visible, et la TVA calculée sur le prix TTC. Le coût réel se rapproche souvent des **40 %**.
+
+Dans le métier, on appelle ça la **règle des trois tiers** : sur une commande livrée via plateforme, un tiers part dans la commission, un tiers dans le coût matière, et il reste un tiers pour payer tout le reste — le personnel, le loyer, l'énergie, le matériel. Autant dire que la marge, elle est quasi inexistante.
+
+Quand on sait que le résultat net moyen d'un restaurant tourne autour de 3 à 5 %, on comprend pourquoi ces commissions ne grignotent pas votre marge — elles la dévorent.
 
 ### "Plus de volume, plus de revenus" — vraiment ?
 
 C'est l'argument qu'on entend le plus. On se dit : "OK, je perds de la marge par commande, mais je me rattrape sur le volume." Sauf que ça ne marche pas comme ça. Si chaque commande vous coûte plus qu'elle ne vous rapporte, faire plus de commandes ne fait qu'aggraver les pertes. C'est mathématique.
 
-Et puis il y a un truc dont on parle moins : la **dépendance**. Votre base de clients, vos données de commande, votre visibilité — tout ça appartient à la plateforme, pas à vous. Le jour où elle change ses conditions ou augmente ses frais, vous n'avez aucun levier.
+Et puis il y a un truc dont on parle moins : la **dépendance**. C'est exactement ce qui s'est passé avec Booking.com dans l'hôtellerie — et les restaurateurs sont en train de vivre le même scénario. Votre base de clients, vos données de commande, votre visibilité — tout ça appartient à la plateforme, pas à vous. Le jour où elle change ses conditions ou augmente ses frais, vous n'avez aucun levier. Et si vous refusez de participer à une promo, votre restaurant est rétrogradé dans les résultats de recherche.
 
-D'ailleurs, **94 % des restaurateurs** interrogés estiment que les taux de commission des plateformes sont trop élevés. Ce n'est pas un ressenti isolé, c'est un constat partagé par quasiment toute la profession.
+D'ailleurs, **94 % des restaurateurs** interrogés estiment que les taux de commission des plateformes sont trop élevés. Ce n'est pas un ressenti isolé, c'est un constat partagé par quasiment toute la profession. Dans un contexte où **10 à 11 établissements ferment chaque jour** en France, chaque euro de marge compte.
 
 ### Reprendre le contrôle de vos commandes (et de vos marges)
 
