@@ -114,8 +114,8 @@
             <p>{{ .content | markdownify }}</p>
           </div>
           <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
-            <a href="{{ if findRE `^http` .primary_link }}{{ .primary_link }}{{ else }}{{ .primary_link | relLangURL }}{{ end }}" class="btn btn-primary btn-lg px-5">{{ .primary_label }}</a>
-            <a href="{{ .secondary_link | relLangURL }}" class="btn btn-outline-primary btn-lg px-5">{{ .secondary_label }}</a>
+            <a href="{{ if findRE `^http` .primary_link }}{{ .primary_link }}{{ else }}{{ .primary_link | relLangURL }}{{ end }}" class="btn btn-primary btn-lg px-5" rel="noopener" aria-label="{{ .primary_label }}">{{ .primary_label }}</a>
+            <a href="{{ .secondary_link | relLangURL }}" class="btn btn-outline-primary btn-lg px-5" aria-label="{{ .secondary_label }}">{{ .secondary_label }}</a>
           </div>
         </div>
       </div>
