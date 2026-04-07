@@ -20,7 +20,7 @@
             </h1>
             <p class="lead mb-4">{{ .subtitle | markdownify }}</p>
             <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
-              <a href="{{ .cta_link }}" class="btn btn-primary btn-lg px-5">{{ .cta_label }}</a>
+              <a href="{{ .cta_link }}" class="btn btn-primary btn-lg px-5" rel="noopener" aria-label="{{ .cta_label }}">{{ .cta_label }}</a>
               <span class="badge-zero-commission align-self-center">{{ .badge }}</span>
             </div>
           </div>
@@ -227,14 +227,14 @@
               <li class="mb-2"><i class="fas fa-check text-success me-2"></i>{{ . }}</li>
               {{ end }}
             </ul>
-            <a href="{{ .cta_link }}" class="btn btn-outline-primary d-block mt-4">{{ .cta_label }}</a>
+            <a href="{{ .cta_link }}" class="btn btn-outline-primary d-block mt-4" rel="noopener" aria-label="{{ .cta_label }}">{{ .cta_label }}</a>
           </div>
         </div>
         {{ end }}
         {{/* Piki card */}}
         <div class="col-lg-4 col-md-6">
           <div class="pricing-card pricing-piki rounded-sm border border-primary p-4 p-lg-5 h-100 position-relative text-center">
-            <span class="pricing-badge">Recommandé</span>
+            {{ with $.Params.pricing_comparison.recommended_badge }}<span class="pricing-badge" aria-hidden="true">{{ . }}</span>{{ end }}
             <h3 class="h5 mb-3">{{ .piki.name }}</h3>
             <div class="pricing-amount mb-1">
               <span class="h3">{{ .piki.price }}</span>
@@ -249,7 +249,7 @@
               <li class="mb-2"><i class="fas fa-check text-success me-2"></i>{{ . }}</li>
               {{ end }}
             </ul>
-            <a href="{{ .piki.cta_link }}" class="btn btn-primary d-block mt-4">{{ .piki.cta_label }}</a>
+            <a href="{{ .piki.cta_link }}" class="btn btn-primary d-block mt-4" rel="noopener" aria-label="{{ .piki.cta_label }}">{{ .piki.cta_label }}</a>
           </div>
         </div>
         {{/* Competitor card */}}
@@ -316,7 +316,7 @@
         <div class="col-lg-8 text-center">
           <h2 class="mb-3">{{ .heading | markdownify }}</h2>
           <p class="lead mb-4">{{ .subtitle | markdownify }}</p>
-          <a href="{{ .cta_link }}" class="btn btn-primary btn-lg px-5">{{ .cta_label }}</a>
+          <a href="{{ .cta_link }}" class="btn btn-primary btn-lg px-5" rel="noopener" aria-label="{{ .cta_label }}">{{ .cta_label }}</a>
         </div>
       </div>
     </div>

@@ -139,6 +139,7 @@ pricing_comparison:
       - "Votre marque passe au second plan"
       - "Vos marges deviennent instables"
       - "Vous dependez d'un intermediaire"
+  recommended_badge: "Recommandé"
   piki:
     name: "Piki"
     price: "49€"
