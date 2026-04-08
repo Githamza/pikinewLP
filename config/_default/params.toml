@@ -13,20 +13,6 @@ newsletter_form_action = "#"
 custom_script = ""
 page_header = "images/page-header.webp"
 
-[[social]]
-title = "instagram"
-icon = "fab fa-instagram"
-link = "https://instagram.com/pikiapp"
-
-[[social]]
-title = "tiktok"
-icon = "fab fa-tiktok"
-link = "https://tiktok.com/@pikiapp"
-
-[[social]]
-title = "linkedin"
-icon = "fab fa-linkedin"
-link = "#"
 
 [preloader]
 enable = true
@@ -41,3 +27,27 @@ enable = false
 expire_days = 2
 content = "Ce site utilise des cookies. En continuant, vous acceptez leur utilisation."
 button = "J'accepte"
+
+############################# Plugins ##############################
+
+# CSS Plugins
+[[plugins.css]]
+link = "plugins/slick/slick.css"
+[[plugins.css]]
+link = "plugins/aos/aos.css"
+[[plugins.css]]
+link = "plugins/font-awesome/fontawesome.min.css"
+[[plugins.css]]
+link = "plugins/font-awesome/brands.css"
+[[plugins.css]]
+link = "plugins/font-awesome/solid.css"
+
+# JS Plugins
+[[plugins.js]]
+link = "plugins/jquery/jquery.min.js"
+[[plugins.js]]
+link = "plugins/bootstrap/bootstrap.min.js"
+[[plugins.js]]
+link = "plugins/slick/slick.min.js"
+[[plugins.js]]
+link = "plugins/aos/aos.js"

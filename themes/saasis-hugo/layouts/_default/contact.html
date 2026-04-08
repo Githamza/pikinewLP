@@ -29,11 +29,6 @@
           <h2 class="title">{{ .title | markdownify }}</h2>
           <p>{{ .content | markdownify }}</p>
         </div>
-        <ul class="list-unstyled list-inline social-box-icons">
-          {{ range site.Params.social }}
-          <li class="list-inline-item mb-2"><a class="d-inline-block" href="{{.link}}" aria-label="social profile"><i class="{{.icon}}"></i></a></li>
-          {{ end }}
-        </ul>
       </div>
 
       <div class="col-lg-8" data-aos="fade">
