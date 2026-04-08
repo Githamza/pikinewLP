@@ -57,7 +57,7 @@ team:
   team_item:
   - name: "Floyd Miles"
     designation: "CEO & Co-Founder"
-    image: "images/team/01.webp"
+    image: "images/team/team-ceo-cofounder.webp"
     description: "Lorem ipsum dolor sit amet, ceonase ctete adipiscing elit. Phasellus eu lacus cuam nisl in sit nunc in. Impe asrdiet fermentuma vulputate dictu. Et ipadv azzsum nibh adipiscing Phasaellus"
     social_links:
     - icon: "fab fa-facebook"
@@ -67,7 +67,7 @@ team:
 
   - name: "Ralph Edwards"
     designation: "Chief Technology Officer"
-    image: "images/team/02.webp"
+    image: "images/team/team-cto.webp"
     description: "Lorem ipsum dolor sit amet, ceonase ctete adipiscing elit. Phasellus eu lacus cuam nisl in sit nunc in. Impe asrdiet fermentuma vulputate dictu. Et ipadv azzsum nibh adipiscing Phasaellus"
     social_links:
     - icon: "fab fa-facebook"
@@ -79,7 +79,7 @@ team:
 
   - name: "Kathryn Murphy"
     designation: "Head of Design"
-    image: "images/team/03.webp"
+    image: "images/team/team-head-design.webp"
     description: "Lorem ipsum dolor sit amet, ceonase ctete adipiscing elit. Phasellus eu lacus cuam nisl in sit nunc in. Impe asrdiet fermentuma vulputate dictu. Et ipadv azzsum nibh adipiscing Phasaellus"
     social_links:
     - icon: "fab fa-facebook"

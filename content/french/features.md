@@ -1,31 +1,31 @@
 ---
 title: "Fonctionnalités"
-heading: "Tout ce dont votre restaurant a besoin"
+heading: "Tout ce qu'il faut pour vendre en direct"
 layout: "features"
 draft: false
 
 features:
-- title: "Boutique en ligne personnalisée"
-  description: "Créez votre boutique en 1 minute. Votre menu, vos couleurs, votre logo. Partagez le lien ou affichez le QR code. Import depuis Uber Eats disponible."
+- title: "Vendez sans commission"
+  description: "Avec Piki, vous ne dependez pas d'une marketplace pour encaisser vos commandes. Vous gardez 100% de vos ventes et un modele de cout simple a comprendre."
   image: "images/features/01.webp"
 
-- title: "Pré-commande intelligente"
-  description: "Vos clients commandent en avance. Vous recevez les commandes le matin et préparez sereinement avant le service. Fini le stress du rush."
+- title: "Activez la pre-commande"
+  description: "Recevez des commandes avant le service pour anticiper vos volumes, mieux preparer votre production et reduire le stress du rush."
   image: "images/features/02.webp"
 
-- title: "Menu QR code sur place"
-  description: "Générez un QR code par table ou pour votre comptoir. Vos clients consultent le menu, commandent et paient depuis leur téléphone."
+- title: "Proposez la commande sur place par QR code"
+  description: "Laissez vos clients consulter le menu, commander et payer depuis leur telephone, en salle ou au comptoir, sans friction inutile."
   image: "images/features/03.webp"
 
-- title: "Livraison intégrée"
-  description: "Livrez via Uber Direct ou vos propres livreurs avec Shipday. Tracking en temps réel, optimisation de routes, notifications automatiques."
+- title: "Gerez votre livraison a votre facon"
+  description: "Travaillez avec Uber Direct ou vos propres livreurs pour proposer une livraison coherente avec votre organisation et vos marges."
   image: "images/features/04.webp"
 
-- title: "Dashboard & statistiques"
-  description: "Suivez vos commandes, vos ventes et vos tendances. Tableau de bord intuitif accessible depuis téléphone ou ordinateur."
+- title: "Pilotez votre activite simplement"
+  description: "Suivez les commandes, les ventes et les tendances depuis un tableau de bord clair, pense pour les besoins du quotidien."
   image: "images/features/05.webp"
 
-- title: "Paiement sécurisé direct"
-  description: "CB, Apple Pay, Google Pay, cartes restaurant. L'argent arrive directement sur votre compte bancaire. 0% de commission."
+- title: "Gardez la relation avec vos clients"
+  description: "Votre boutique, votre image, vos clients. Piki vous aide a construire une vente directe plus durable et plus rentable."
   image: "images/features/06.webp"
 ---

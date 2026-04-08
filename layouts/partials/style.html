@@ -2,8 +2,13 @@
 <meta http-equiv="x-dns-prefetch-control" content="on">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 <link rel="dns-prefetch" href="https://fonts.googleapis.com">
 <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
+<!-- preload critical font to break request chain -->
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
 
 <!-- Early font preload: start downloading Google Fonts CSS from <head> -->
 {{$pf := site.Params.variables.primary_font | default "Poppins:wght@400;500;600;700"}}

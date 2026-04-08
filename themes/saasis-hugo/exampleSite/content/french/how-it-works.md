@@ -16,51 +16,51 @@ work_process:
     tablist_item:
     - subtitle: "Why customer retention is the ultimate Of growth"
       description: "Lorem ipsum dolor, consetur lectus vehicula eget ante. Neque non tristique tincidunt quam commodo"
-      image: "images/work-process/01.webp"
+      image: "images/work-process/create-shop.webp"
 
     - subtitle: "Accross All Your Mobile App And Web Applications"
       description: "Lorem ipsum dolor, consetur lectus vehicula eget ante. Neque non tristique tincidunt quam commodo"
-      image: "images/work-process/02.webp"
+      image: "images/work-process/choose-order-modes.webp"
 
     - subtitle: "How to Be  build the ultimate tech stack for growth"
       description: "Lorem ipsum dolor, consetur lectus vehicula eget ante. Neque non tristique tincidunt quam commodo"
-      image: "images/work-process/03.webp"
+      image: "images/work-process/share-order-link.webp"
 
     - subtitle: "Accross All Your Mobile App And Web Applications"
       description: "Lorem ipsum dolor, consetur lectus vehicula eget ante. Neque non tristique tincidunt quam commodo"
-      image: "images/work-process/02.webp"
+      image: "images/work-process/start-direct-selling.webp"
 
   - title: "For Basic Users"
     tablist_item:
     - subtitle: "Accross All Your Mobile App And Web Applications"
       description: "Lorem ipsum dolor, consetur lectus vehicula eget ante. Neque non tristique tincidunt quam commodo"
-      image: "images/work-process/02.webp"
+      image: "images/work-process/realtime-orders.webp"
 
     - subtitle: "Why customer retention is the ultimate Of growth"
       description: "Lorem ipsum dolor, consetur lectus vehicula eget ante. Neque non tristique tincidunt quam commodo"
-      image: "images/work-process/01.webp"
+      image: "images/work-process/prepare-with-visibility.webp"
 
     - subtitle: "How to Be  build the ultimate tech stack for growth"
       description: "Lorem ipsum dolor, consetur lectus vehicula eget ante. Neque non tristique tincidunt quam commodo"
-      image: "images/work-process/03.webp"
+      image: "images/work-process/direct-payment.webp"
 
   - title: "For Heavy Users"
     tablist_item:
     - subtitle: "How to Be  build the ultimate tech stack for growth"
       description: "Lorem ipsum dolor, consetur lectus vehicula eget ante. Neque non tristique tincidunt quam commodo"
-      image: "images/work-process/03.webp"
+      image: "images/work-process/own-brand-selling.webp"
 
     - subtitle: "Why customer retention is the ultimate Of growth"
       description: "Lorem ipsum dolor, consetur lectus vehicula eget ante. Neque non tristique tincidunt quam commodo"
-      image: "images/work-process/01.webp"
+      image: "images/work-process/client-relationship.webp"
 
     - subtitle: "Accross All Your Mobile App And Web Applications"
       description: "Lorem ipsum dolor, consetur lectus vehicula eget ante. Neque non tristique tincidunt quam commodo"
-      image: "images/work-process/02.webp"
+      image: "images/work-process/profitable-model.webp"
 
     - subtitle: "How to Be  build the ultimate tech stack for growth"
       description: "Lorem ipsum dolor, consetur lectus vehicula eget ante. Neque non tristique tincidunt quam commodo"
-      image: "images/work-process/03.webp"
+      image: "images/work-process/serene-management.webp"
 
 
 # working_steps
@@ -75,15 +75,7 @@ working_steps:
     subtitle: "Built to convert"
     content: "Lorem ipsum dolor amet, consectetur adipisacing elit. Nibh sem tellus turpis lectus eu vehicula eget ante. Neque non tristique tincidunt quam commodo, inas consectetur pellen tesrfgb srgbw ssqs dvgsue."
     
-    process:
-    - name: "Client Projects"
-      image: "images/features/02.webp"
-    - name: "Digital Analytics"
-      image: "images/features/03.webp"
-    - name: "Creative Ideas"
-      image: "images/features/04.webp"
-    - name: "Analytics Toolbox"
-      image: "images/features/05.webp"
+    image: "images/features/02.webp"
 
   step_two:
     title: "Saais is a high convert template In the saaS"
