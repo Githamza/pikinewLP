@@ -436,6 +436,7 @@ main a:not(.btn):not(.nav-link):not(.navbar-brand):not(.dropdown-item):not(.text
   &:hover {
     color: $primary-color-text;
   }
+}
 /* Darken btn-primary for white-on-orange contrast (WCAG AA) */
 .btn-primary {
   background: $btn-bg-accessible;
