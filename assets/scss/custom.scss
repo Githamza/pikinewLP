@@ -1,7 +1,7 @@
 /* ==================== PIKI CUSTOM STYLES ==================== */
 
 /* Accessible text color: #C05300 gives 4.65:1 contrast on white (WCAG AA) */
-$primary-color-text: #C05300;
+$primary-color-text: #c05300;
 
 /* AOS safety net: show elements until AOS is initialized */
 [data-aos] {
@@ -41,7 +41,9 @@ body.aos-initialized [data-aos] {
   width: 100%;
   opacity: 0;
   transform: scale(0.95);
-  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+  transition:
+    opacity 0.6s ease-in-out,
+    transform 0.6s ease-in-out;
   pointer-events: none;
 
   &.active {
@@ -95,7 +97,11 @@ body.aos-initialized [data-aos] {
 
 /* Zero Commission Badge */
 .badge-zero-commission {
-  background: linear-gradient(135deg, lighten($primary-color, 30%), lighten($primary-color, 20%));
+  background: linear-gradient(
+    135deg,
+    lighten($primary-color, 30%),
+    lighten($primary-color, 20%)
+  );
   color: darken($primary-color, 15%);
   padding: 8px 20px;
   border-radius: 50px;
@@ -106,7 +112,9 @@ body.aos-initialized [data-aos] {
 
 /* Use Case Cards */
 .use-case-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   cursor: default;
 
   &:hover {
@@ -157,7 +165,9 @@ body.aos-initialized [data-aos] {
 
 /* Feature Cards */
 .feature-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 
   &:hover {
     transform: translateY(-3px);
@@ -194,7 +204,11 @@ body.aos-initialized [data-aos] {
     top: 1rem;
     bottom: 1rem;
     width: 3px;
-    background: linear-gradient(to bottom, $primary-color, lighten($primary-color, 25%));
+    background: linear-gradient(
+      to bottom,
+      $primary-color,
+      lighten($primary-color, 25%)
+    );
     border-radius: 3px;
 
     @media (min-width: 768px) {
@@ -257,7 +271,9 @@ body.aos-initialized [data-aos] {
     position: relative;
     min-height: 100%;
     box-shadow: 0 14px 38px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
 
     h3 {
       margin-bottom: 0.5rem;
@@ -391,7 +407,7 @@ section:last-of-type {
 
 /* ==================== ACCESSIBILITY: CONTRAST FIXES ==================== */
 /* Accessible button background: #D4570A gives 4.51:1 contrast with white (WCAG AA) */
-$btn-bg-accessible: #D4570A;
+$btn-bg-accessible: #d4570a;
 
 /* Override primary-colored text on light backgrounds for WCAG AA (4.5:1) */
 /* $primary-color (#FF6B35) has only 3.22:1 contrast on white — use #C05300 (4.65:1) */
@@ -424,11 +440,14 @@ a:hover {
 
 /* Ensure main-content background is opaque enough for text contrast */
 .main-content {
-  background-color: rgba($white, 0.92);
+  background-color: rgba($white, 0.42);
 }
 
 /* Make inline links distinguishable (not just by color) */
-main a:not(.btn):not(.nav-link):not(.navbar-brand):not(.dropdown-item):not(.text-dark) {
+main
+  a:not(.btn):not(.nav-link):not(.navbar-brand):not(.dropdown-item):not(
+    .text-dark
+  ) {
   text-decoration: underline;
   text-decoration-color: $primary-color-text;
   text-underline-offset: 2px;
