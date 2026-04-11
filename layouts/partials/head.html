@@ -1,5 +1,10 @@
 <meta charset="utf-8" />
-<title>{{.Title | default site.Title}}</title>
+{{/* ==================== TITLE ==================== */}}
+{{- $siteTitle := site.Title -}}
+{{- $pageTitle := .Title -}}
+<title>{{- if .IsHome -}}{{ $siteTitle }}{{- else if $pageTitle -}}{{ $pageTitle }} | {{ site.Params.brand_name | default "Piki" }}{{- else -}}{{ $siteTitle }}{{- end -}}</title>
+
+{{/* ==================== MICROSOFT CLARITY (async) ==================== */}}
 <script type="text/javascript">
   (function (c, l, a, r, i, t, y) {
     c[a] =
@@ -14,35 +19,37 @@
     y.parentNode.insertBefore(t, y);
   })(window, document, "clarity", "script", "opoqwzk9au");
 </script>
-<!-- base url -->
+
+{{/* ==================== BASE URL (skip placeholder domains) ==================== */}}
 {{ if or (eq site.BaseURL "/") (eq site.BaseURL "http://localhost:1313/") (eq
 site.BaseURL "http://examplesite.org/") (eq site.BaseURL
 "https://examplesite.org/") (eq site.BaseURL "http://examplesite.com/") (eq
 site.BaseURL "https://examplesite.com/")}}{{else}}
 <base href="{{ site.BaseURL }}" />
-{{ end }} {{ "<!-- theme meta -->" | safeHTML }}
+{{ end }}
 <meta name="theme-name" content="saasis-hugo" />
 
-<!-- multilingual SEO optimizations (absolute URLs for hreflang) -->
-{{ if .IsTranslated }} {{ range .AllTranslations }}
-<link
-  rel="alternate"
-  hreflang="{{.Lang}}"
-  href="{{ .Permalink }}"
-/>
-{{ end }}
-<link
-  rel="alternate"
-  hreflang="x-default"
-  href="{{ .Permalink }}"
-/>
+{{/* ==================== CANONICAL (self-referential, absolute) ==================== */}}
+<link rel="canonical" href="{{ .Permalink }}" />
+
+{{/* ==================== HREFLANG (absolute) ==================== */}}
+{{ if .IsTranslated }}
+  {{ range .AllTranslations }}
+    <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}" />
+  {{ end }}
+  <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}" />
+{{ else }}
+  <link rel="alternate" hreflang="fr" href="{{ .Permalink }}" />
+  <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}" />
 {{ end }}
 
-<!-- mobile responsive meta -->
+{{/* ==================== VIEWPORT / ROBOTS / DESCRIPTION ==================== */}}
 <meta
   name="viewport"
   content="width=device-width, initial-scale=1, maximum-scale=5"
 />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta
   name="description"
   content="{{ .Params.Description | default site.Params.description }}"
@@ -50,7 +57,7 @@ site.BaseURL "https://examplesite.com/")}}{{else}}
 {{ with site.Params.author }}<meta name="author" content="{{ . }}" />{{ end }}
 {{ hugo.Generator }}
 
-<!-- favicon -->
+{{/* ==================== FAVICON ==================== */}}
 {{ $favicon:= site.Params.favicon }} {{ $path := (print `assets/` $favicon)}} {{
 if fileExists $path }} {{ $favicon:= resources.Get $favicon }} {{ $favicon_16:=
 $favicon.Resize "16x png"}} {{ $favicon_32:= $favicon.Resize "32x png"}} {{
@@ -89,28 +96,40 @@ $favicon_180:= $favicon.Resize "180x png"}}
   content="{{site.Params.variables.body_color | default `#ffffff` }}"
 />
 
-{{ "<!-- Open Graph image and Twitter Card metadata -->" | safeHTML }} {{
-$image_path := .Params.image | default site.Params.image -}} {{
-$image_path_local := printf "static/%s" $image_path -}} {{ $image_ext := trim
-(path.Ext $image_path | lower) "." -}} {{ if fileExists $image_path_local -}}
-<meta property="og:image" content="{{ $image_path | absURL }}" />
-{{/* If not SVG, read image aspect ratio and define Twitter Card and Open Graph
-width and height */ -}} {{ if ne $image_ext "svg" -}} {{ with (imageConfig
-$image_path_local) -}} {{ if (and (gt .Width 144) (gt .Height 144)) -}}
-<meta name="twitter:image" content="{{ $image_path | absURL }}" />
-<meta
-  name="twitter:card"
-  content="summary{{ if (and (gt .Width 300) (gt .Height 157) (not (eq .Width .Height))) }}_large_image{{ end }}"
-/>
+{{/* ==================== OPEN GRAPH / TWITTER CARDS ==================== */}}
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+<meta property="og:site_name" content="{{ site.Params.site_name | default site.Title }}" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}" />
+<meta property="og:description" content="{{ .Params.Description | default site.Params.description }}" />
+
+{{ $image_path := .Params.image | default site.Params.image -}}
+{{ $image_path_local := printf "static/%s" $image_path -}}
+{{ $image_ext := trim (path.Ext $image_path | lower) "." -}}
+{{ if and $image_path (fileExists $image_path_local) -}}
+  <meta property="og:image" content="{{ $image_path | absURL }}" />
+  {{ if ne $image_ext "svg" -}}
+    {{ with (imageConfig $image_path_local) -}}
+      {{ if (and (gt .Width 144) (gt .Height 144)) -}}
+        <meta name="twitter:image" content="{{ $image_path | absURL }}" />
+        <meta
+          name="twitter:card"
+          content="summary{{ if (and (gt .Width 300) (gt .Height 157) (not (eq .Width .Height))) }}_large_image{{ end }}"
+        />
+      {{ end -}}
+      <meta property="og:image:width" content="{{ .Width }}" />
+      <meta property="og:image:height" content="{{ .Height }}" />
+    {{ end -}}
+  {{ end -}}
+  <meta
+    property="og:image:type"
+    content="image/{{ if eq $image_ext `svg` }}svg+xml{{ else }}{{ replaceRE `^jpg$` `jpeg` $image_ext }}{{ end }}"
+  />
+{{ else -}}
+  <meta name="twitter:card" content="summary_large_image" />
 {{ end -}}
-<meta property="og:image:width" content="{{ .Width }}" />
-<meta property="og:image:height" content="{{ .Height }}" />
-{{ end -}} {{ end -}}
-<meta
-  property="og:image:type"
-  content="image/{{ if eq $image_ext `svg` }}svg+xml{{ else }}{{ replaceRE `^jpg$` `jpeg` $image_ext }}{{ end }}"
-/>
-{{ end -}}
+
 <meta
   name="twitter:title"
   content="{{ with .Title }}{{ . }}{{ else }}{{ site.Title }}{{ end }}"
@@ -122,10 +141,136 @@ $image_path_local) -}} {{ if (and (gt .Width 144) (gt .Height 144)) -}}
 {{ range site.Params.Social }} {{ with .twitter -}}<meta
   name="twitter:site"
   content="@{{ . }}"
-/>{{ end -}} {{ end -}} {{ range site.Params.Authors }} {{ with .twitter
--}}<meta name="twitter:creator" content="@{{ . }}" />{{ end -}} {{ end -}} {{
-template "_internal/opengraph.html" . }} {{ template
-"_internal/twitter_cards.html" . }}
+/>{{ end -}} {{ end -}}
+{{ range site.Params.Authors }} {{ with .twitter
+-}}<meta name="twitter:creator" content="@{{ . }}" />{{ end -}} {{ end -}}
 
-<!-- google analytics -->
-{{ template "_internal/google_analytics.html" . }}
+{{/* ==================== JSON-LD STRUCTURED DATA ==================== */}}
+{{- $brand := site.Params.brand_name | default "Piki" -}}
+{{- $logoURL := "" -}}
+{{- if site.Params.logo -}}
+  {{- $logoRes := resources.Get site.Params.logo -}}
+  {{- if $logoRes -}}{{- $logoURL = $logoRes.Permalink -}}{{- end -}}
+{{- end -}}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "{{ $brand }}",
+  "legalName": "{{ site.Params.legal_name | default $brand }}",
+  "url": "{{ site.BaseURL }}",
+  {{ with $logoURL }}"logo": "{{ . }}",{{ end }}
+  "email": "{{ site.Params.support_email | default "contact@piki-app.fr" }}",
+  "foundingDate": "{{ site.Params.founding_date | default "2023" }}",
+  "description": "{{ site.Params.description }}",
+  "areaServed": "{{ site.Params.country | default "FR" }}",
+  "sameAs": [
+    {{- $profiles := site.Params.social_profiles | default slice -}}
+    {{- range $i, $p := $profiles -}}
+      {{- if $i }},{{ end }}"{{ $p }}"
+    {{- end }}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ $brand }}",
+  "url": "{{ site.BaseURL }}",
+  "inLanguage": "fr-FR",
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ $brand }}"
+  }
+}
+</script>
+
+{{- if .IsHome -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "{{ $brand }}",
+  "url": "{{ site.BaseURL }}",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web, iOS, Android",
+  "description": "{{ site.Params.description }}",
+  "inLanguage": "fr-FR",
+  "offers": {
+    "@type": "Offer",
+    "price": "49",
+    "priceCurrency": "EUR",
+    "priceSpecification": {
+      "@type": "UnitPriceSpecification",
+      "price": "49",
+      "priceCurrency": "EUR",
+      "referenceQuantity": {
+        "@type": "QuantitativeValue",
+        "value": "1",
+        "unitCode": "MON"
+      }
+    },
+    "url": "{{ site.Params.app_url | default "https://piki-app.com/admin/register" }}",
+    "availability": "https://schema.org/InStock"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ $brand }}"
+  }
+}
+</script>
+
+{{- with .Params.faq_section }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {{- range $i, $item := .items -}}
+      {{- if $i }},{{ end }}
+      {
+        "@type": "Question",
+        "name": {{ $item.title | jsonify }},
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": {{ $item.content | jsonify }}
+        }
+      }
+    {{- end }}
+  ]
+}
+</script>
+{{- end -}}
+
+{{- with .Params.how_it_works }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": {{ .heading | jsonify }},
+  "inLanguage": "fr-FR",
+  "step": [
+    {{- range $i, $step := .steps -}}
+      {{- if $i }},{{ end }}
+      {
+        "@type": "HowToStep",
+        "position": {{ add $i 1 }},
+        "name": {{ $step.title | jsonify }},
+        "text": {{ $step.description | jsonify }}
+      }
+    {{- end }}
+  ]
+}
+</script>
+{{- end -}}
+{{- end -}}
+
+{{/* ==================== GOOGLE ANALYTICS (only if ID set) ==================== */}}
+{{ with site.Config.Services.GoogleAnalytics.ID }}
+  {{ if ne . "G-MEASUREMENT_ID" }}
+    {{ template "_internal/google_analytics.html" $ }}
+  {{ end }}
+{{ end }}

@@ -1,19 +1,24 @@
 ######################## default configuration ####################
-baseURL = "/"
-title = "Piki — Commande en ligne pour restaurants | 0% de commission"
+baseURL = "https://www.piki-app.fr/"
+title = "Piki — Commande en ligne restaurant sans commission | Click & Collect, QR code, livraison"
 theme = "saasis-hugo"
 defaultContentLanguage = "fr"
+languageCode = "fr-fr"
+# Canonical URL handling: strip trailing slashes/index pages per Google best practice
+canonifyURLs = false
 # post pagination
 pagination.pagerSize = 6
 # post excerpt
 summaryLength = "10"
 # disable language
 disableLanguages = []
+enableRobotsTXT = true
 
 ########################### Services #############################
 [services]
 [services.googleAnalytics]
-ID = 'G-MEASUREMENT_ID' # TODO: replace with real GA ID
+# Leave empty to avoid injecting a broken/placeholder GA tag (hurts CWV/PageSpeed)
+ID = ''
 
 [services.disqus]
 shortname = ''

@@ -1,7 +1,11 @@
 ---
+title: "Piki — Commande en ligne restaurant sans commission"
+description: "Piki est la solution de commande en ligne pour restaurants : Click & Collect, commande sur place par QR code et livraison, sans commission. Essai gratuit 14 jours."
 ############################ Hero ##################################
 hero:
-  title_before: "Vos clients commandent"
+  brand_lead: "Piki"
+  tagline: "Commande en ligne pour restaurants — 0% de commission"
+  title_before: "Avec Piki, vos clients commandent"
   rotating_phrases:
     - "en avance pour le midi"
     - "sur place via QR code"
