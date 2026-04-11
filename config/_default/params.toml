@@ -23,7 +23,7 @@ support_email = "contact@piki-app.fr"
 founding_date = "2023"
 country = "FR"
 # Social profiles to be linked in Organization sameAs (add real URLs later)
-social_profiles = []
+social_profiles = ["https://www.tiktok.com/@picki_app", "https://www.instagram.com/picki_app/", "https://www.facebook.com/pickiapp/"]
 
 
 [preloader]
