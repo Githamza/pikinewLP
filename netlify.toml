@@ -4,6 +4,6 @@
   
 [build.environment]
   HUGO_VERSION = "0.147.6"
-  HUGO_BASEURL = "https://piki-app.fr/"
+  HUGO_BASEURL = "https://www.piki-app.fr/"
 
 # Note: Security and cache headers are handled via static/.htaccess for OVH (Apache)

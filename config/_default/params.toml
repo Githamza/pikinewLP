@@ -2,16 +2,28 @@ favicon = "images/favicon.png"
 logo_text = "Piki"
 logo = "images/logo.svg"
 logo_width = "101px"
-description = "Piki permet aux restaurants de recevoir des commandes en ligne sans commission. Click & collect, commande sur place, livraison. Essai gratuit."
+description = "Piki est la solution de commande en ligne pour restaurants sans commission : Click & Collect, commande sur place par QR code et livraison. Essai gratuit 14 jours, 0% de commission sur vos ventes."
 author = "Piki"
 address = ""
 mobile = ""
 email = "contact@piki-app.fr"
-footer_info = "La solution de commande en ligne pour restaurants. Pré-commande, sur place, livraison — 0% de commission."
+footer_info = "Piki — la solution de commande en ligne pour restaurants. Pré-commande, QR code sur place et livraison, 0% de commission."
 contact_form_action = "#"
 newsletter_form_action = "#"
 custom_script = ""
 page_header = "images/page-header.webp"
+image = "images/og-image.png"
+
+# Structured data / brand info used in JSON-LD
+brand_name = "Piki"
+legal_name = "Piki"
+site_name = "Piki"
+app_url = "https://piki-app.com/admin/register"
+support_email = "contact@piki-app.fr"
+founding_date = "2023"
+country = "FR"
+# Social profiles to be linked in Organization sameAs (add real URLs later)
+social_profiles = []
 
 
 [preloader]
