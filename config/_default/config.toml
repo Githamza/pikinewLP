@@ -10,9 +10,26 @@ canonifyURLs = false
 pagination.pagerSize = 6
 # post excerpt
 summaryLength = "10"
-# disable language
-disableLanguages = []
+# Disable English — content not ready, only French is active
+disableLanguages = ["en"]
 enableRobotsTXT = true
+
+# Exclude taxonomy listing pages (tags, categories) from the build entirely
+# They generate thin pages that dilute crawl budget
+disableKinds = ["taxonomy", "term"]
+
+# Mount only French content — prevents Hugo from processing content/english/
+# as a regular section and generating duplicate /french/ and /english/ paths
+[[module.mounts]]
+  source = "content/french"
+  target = "content"
+  lang = "fr"
+[[module.mounts]]
+  source = "static"
+  target = "static"
+[[module.mounts]]
+  source = "assets"
+  target = "assets"
 
 ########################### Services #############################
 [services]

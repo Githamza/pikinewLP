@@ -3,6 +3,9 @@ title: "Pourquoi les restaurants passent a la vente directe"
 heading: "Ce que Piki change au quotidien"
 layout: "testimonials"
 draft: false
+_build:
+  render: never
+  list: never
 
 testimonials:
 - name: "0% de commission"

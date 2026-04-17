@@ -36,11 +36,23 @@ module.exports = {
 
   // Default date range for the "current" period
   DEFAULT_START_DATE: "2026-01-01",
-  DEFAULT_END_DATE: "2026-03-31",
+  DEFAULT_END_DATE: "2026-04-17",
+
+  // Actual site URL for sitemap discovery (not the sc-domain: property)
+  SITE_URL_HTTP: "https://www.piki-app.fr",
 
   // Key URLs to run URL Inspection API against
   // Ordered by priority (from Q1 2026 GSC data — top impression drivers)
-  KEY_URLS: [],
+  KEY_URLS: [
+    "https://www.piki-app.fr/",
+    "https://www.piki-app.fr/blog/",
+    "https://www.piki-app.fr/contact/",
+    "https://www.piki-app.fr/pricing/",
+    "https://www.piki-app.fr/features/",
+    "https://www.piki-app.fr/how-it-works/",
+    "https://www.piki-app.fr/use-cases/",
+    "https://www.piki-app.fr/about/",
+  ],
 
   // Countries to fetch per-country query breakdowns for
   // Based on Q1 2026 data showing these as top impression sources

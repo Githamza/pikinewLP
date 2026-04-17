@@ -48,8 +48,20 @@ site.BaseURL "https://examplesite.com/")}}{{else}}
   name="viewport"
   content="width=device-width, initial-scale=1, maximum-scale=5"
 />
+{{/* Noindex non-valuable pages: elements, testimonials, brands-logos, about-info (section data, not real pages) */}}
+{{- $noindex := slice "elements" "testimonials" "brands-logos" "about-info" "faq" -}}
+{{- $isNoindex := false -}}
+{{- with .File -}}
+  {{- range $noindex -}}
+    {{- if eq $.File.ContentBaseName . }}{{ $isNoindex = true }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+{{- if $isNoindex -}}
+<meta name="robots" content="noindex, nofollow" />
+{{- else -}}
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+{{- end -}}
 <meta
   name="description"
   content="{{ .Params.Description | default site.Params.description }}"

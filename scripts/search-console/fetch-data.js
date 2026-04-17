@@ -314,7 +314,7 @@ async function fetchUrlInspections(auth, urls, label = 'pages') {
   const start = Date.now();
 
   for (const url of urls) {
-    const shortUrl = url.replace(config.SITE_URL.replace(/\/$/, ''), '') || '/';
+    const shortUrl = url.replace((config.SITE_URL_HTTP || config.SITE_URL).replace(/\/$/, ''), '') || '/';
     done++;
     process.stdout.write(`  [${done}/${urls.length}] ${shortUrl.slice(0, 60)} ... `);
     try {
@@ -469,7 +469,7 @@ async function fetchAllData(auth, opts) {
   let sitemapUrls = [];
   if (!opts.light && !opts.keyUrlsOnly) {
     try {
-      const rootSitemap = config.SITE_URL.replace(/\/$/, '') + '/sitemap.xml';
+      const rootSitemap = (config.SITE_URL_HTTP || config.SITE_URL).replace(/\/$/, '') + '/sitemap.xml';
       sitemapUrls = await discoverSitemapUrls(rootSitemap);
     } catch (err) {
       console.log(`  could not discover sitemap URLs: ${err.message}`);
@@ -623,7 +623,7 @@ function printSummary(data) {
     if (problems.length) {
       console.log(`\n  Problematic URLs (not indexed but not intentional):`);
       problems.slice(0, 20).forEach((p) => {
-        const shortUrl = p.url.replace(config.SITE_URL.replace(/\/$/, ''), '') || '/';
+        const shortUrl = p.url.replace((config.SITE_URL_HTTP || config.SITE_URL).replace(/\/$/, ''), '') || '/';
         console.log(`    ${shortUrl}`);
         console.log(`      → ${p.coverage}`);
       });
@@ -639,7 +639,7 @@ function printSummary(data) {
     if (canonMismatches.length) {
       console.log(`\n  Canonical mismatches (Google picked a different canonical):`);
       canonMismatches.slice(0, 10).forEach((e) => {
-        const shortUrl = e.url.replace(config.SITE_URL.replace(/\/$/, ''), '') || '/';
+        const shortUrl = e.url.replace((config.SITE_URL_HTTP || config.SITE_URL).replace(/\/$/, ''), '') || '/';
         console.log(`    ${shortUrl}`);
         console.log(`      user:   ${e.userCanonical}`);
         console.log(`      google: ${e.googleCanonical}`);

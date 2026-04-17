@@ -1,4 +1,13 @@
 # =============================================
+# Force www (301 redirect)
+# =============================================
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_HOST} ^piki-app\.fr$ [NC]
+  RewriteRule ^(.*)$ https://www.piki-app.fr/$1 [R=301,L]
+</IfModule>
+
+# =============================================
 # Cache Control for OVH (Apache)
 # =============================================
 

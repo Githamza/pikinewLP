@@ -2,8 +2,9 @@
 title: "Utilisé par des équipes de tous les secteurs"
 layout: "partners"
 draft: false
-build:
+_build:
   render: never
+  list: never
 
 partners:
 - image: "images/clients/01.png"

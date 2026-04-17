@@ -3,6 +3,9 @@ title: "About us"
 heading: "Industry leaders use Saasis to organize A business"
 description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, seaa  diam nonumy eirmod tempor invidunt ut labore et saldzfore "
 draft: false
+_build:
+  render: never
+  list: never
 build:
   render: never
 

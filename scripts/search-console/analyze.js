@@ -113,11 +113,11 @@ function analyzeContentGaps(data) {
         const totalImpressions = queries.reduce((s, q) => s + q.impressions, 0);
         gaps.push({
           type: 'content_hub',
-          page: page.replace(config.SITE_URL, '/'),
+          page: page.replace((config.SITE_URL_HTTP || config.SITE_URL), '/'),
           queryCount: queries.length,
           totalImpressions,
           topQueries: queries.sort((a, b) => b.impressions - a.impressions).slice(0, 5).map(q => q.query),
-          suggestion: `Page "${page.replace(config.SITE_URL, '/')}" ranks for ${queries.length} queries. Consider creating dedicated sub-pages for top query clusters.`,
+          suggestion: `Page "${page.replace((config.SITE_URL_HTTP || config.SITE_URL), '/')}" ranks for ${queries.length} queries. Consider creating dedicated sub-pages for top query clusters.`,
         });
       }
     });
@@ -138,7 +138,7 @@ function analyzeContentGaps(data) {
             type: 'cannibalization',
             query,
             pages: pages.map(p => ({
-              url: p.page.replace(config.SITE_URL, '/'),
+              url: p.page.replace((config.SITE_URL_HTTP || config.SITE_URL), '/'),
               clicks: p.clicks,
               impressions: p.impressions,
               position: p.position,

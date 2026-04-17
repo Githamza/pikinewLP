@@ -2,6 +2,9 @@
 title: "Éléments"
 description: "this is meta description"
 draft: false
+_build:
+  render: never
+  list: never
 ---
 
 

@@ -2,8 +2,9 @@
 title: "FAQ"
 heading: "Questions fréquentes"
 draft: false
-build:
+_build:
   render: never
+  list: never
 
 image: "images/feature-image-3.webp"
 
