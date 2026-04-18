@@ -63,4 +63,10 @@
   Header set X-XSS-Protection "1; mode=block"
   Header set Referrer-Policy "same-origin"
   Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+  # Link headers for agent discovery (RFC 8288)
+  <FilesMatch "\.html$">
+    Header append Link "</sitemap.xml>; rel=\"sitemap\"; type=\"application/xml\""
+    Header append Link "</.well-known/sitepins.json>; rel=\"describedby\"; type=\"application/json\""
+  </FilesMatch>
 </IfModule>
