@@ -45,8 +45,12 @@ shortname = ''
 quality = 90
 
 ############################# Outputs ##############################
+# Markdown for Agents: every page is also emitted as .md so that
+# Apache can serve it when a client sends Accept: text/markdown.
 [outputs]
-home = ["HTML", "RSS", "JSON", "WebAppManifest"]
+home = ["HTML", "RSS", "JSON", "WebAppManifest", "Markdown"]
+page = ["HTML", "Markdown"]
+section = ["HTML", "RSS", "Markdown"]
 
 [markup]
 [markup.goldmark.renderer]
@@ -60,7 +64,17 @@ suffixes = ["webmanifest"]
 delimiter = ""
 suffixes = [""]
 
+[mediaTypes."text/markdown"]
+suffixes = ["md"]
+
 [outputFormats]
 [outputFormats.WebAppManifest]
 mediaType = "application/manifest+json"
 rel = "manifest"
+
+[outputFormats.Markdown]
+mediaType = "text/markdown"
+isPlainText = true
+isHTML = false
+noUgly = true
+rel = "alternate"
