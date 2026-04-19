@@ -1,5 +1,6 @@
 ---
 title: "Comment la commande en ligne transforme la restauration en 2026"
+slug: "commande-en-ligne-restaurant-2026"
 description: "La commande en ligne pour restaurant n'est plus une option. Découvrez comment le click & collect, la commande par QR code et les plateformes sans commission aident les restaurateurs à augmenter leur chiffre d'affaires."
 images:
   - "images/blogs/online_order.webp"

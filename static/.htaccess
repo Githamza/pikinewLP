@@ -8,6 +8,23 @@
 </IfModule>
 
 # =============================================
+# Blog: 301 redirects from legacy numeric slugs to SEO-friendly slugs
+# =============================================
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^blog/blog-1/?$ /blog/commande-en-ligne-restaurant-2026/ [R=301,L]
+  RewriteRule ^blog/blog-2/?$ /blog/commission-zero-livraison-restaurant/ [R=301,L]
+  RewriteRule ^blog/blog-3/?$ /blog/qr-code-restaurant-menu-digital/ [R=301,L]
+  RewriteRule ^blog/blog-4/?$ /blog/pre-commande-restaurant-service-midi/ [R=301,L]
+  RewriteRule ^blog/blog-5/?$ /blog/erreurs-commande-en-ligne-restaurant/ [R=301,L]
+  RewriteRule ^blog/blog-6/?$ /blog/fideliser-clients-restaurant-digital/ [R=301,L]
+  RewriteRule ^blog/blog-7/?$ /blog/livraison-vs-click-and-collect-restaurant/ [R=301,L]
+  RewriteRule ^blog/blog-8/?$ /blog/creer-menu-digital-restaurant-attractif/ [R=301,L]
+  RewriteRule ^blog/blog-9/?$ /blog/rappel-listeria-plats-prepares-restaurateurs/ [R=301,L]
+  RewriteRule ^blog/blog-10/?$ /blog/fidelite-client-restaurant-guide/ [R=301,L]
+</IfModule>
+
+# =============================================
 # Cache Control for OVH (Apache)
 # =============================================
 

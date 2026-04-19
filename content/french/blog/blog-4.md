@@ -1,5 +1,6 @@
 ---
 title: "Pré-commande restaurant : boostez votre service du midi"
+slug: "pre-commande-restaurant-service-midi"
 description: "La pré-commande permet aux restaurants d'optimiser le service du midi et d'augmenter leur chiffre d'affaires. Voici comment."
 images:
   - "images/blogs/handle_rush.webp"

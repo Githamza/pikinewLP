@@ -1,5 +1,6 @@
 ---
 title: "5 erreurs à éviter quand on lance la commande en ligne pour son restaurant"
+slug: "erreurs-commande-en-ligne-restaurant"
 description: "Les pièges courants lors de la mise en place d'un système de commande en ligne et comment les éviter."
 images:
   - "images/blogs/errors-to-avoid.webp"

@@ -1,5 +1,6 @@
 ---
 title: "Rappel listeria plats préparés : 76 produits retirés, ce que les restaurateurs doivent savoir"
+slug: "rappel-listeria-plats-prepares-restaurateurs"
 description: "Rappel massif de plats préparés contaminés à la listeria en avril 2026. Salades, sandwichs, pâtes… Découvrez les produits concernés et les mesures essentielles pour les restaurateurs afin de protéger leurs clients."
 images:
   - "images/blogs/listeria-rappel-plats-prepares.webp"

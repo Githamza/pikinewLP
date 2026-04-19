@@ -1,5 +1,6 @@
 ---
 title: "Comment créer un menu digital attractif pour votre restaurant"
+slug: "creer-menu-digital-restaurant-attractif"
 description: "Conseils pratiques pour concevoir un menu en ligne qui donne envie de commander et augmente votre panier moyen."
 images:
   - "images/blogs/digital-menu.webp"

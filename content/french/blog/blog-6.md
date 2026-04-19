@@ -1,5 +1,6 @@
 ---
 title: "Fidéliser vos clients grâce au digital : le guide du restaurateur"
+slug: "fideliser-clients-restaurant-digital"
 description: "Stratégies digitales pour fidéliser la clientèle de votre restaurant et augmenter le taux de retour."
 images:
   - "images/blogs/loyality-in-restauration.webp"

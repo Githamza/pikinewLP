@@ -1,5 +1,6 @@
 ---
 title: "0 % de commission : pourquoi c'est important pour votre restaurant"
+slug: "commission-zero-livraison-restaurant"
 description: "Les plateformes de livraison prélèvent jusqu'à 30 % sur chaque commande. Découvrez le vrai coût de ces commissions et comment garder vos marges."
 images:
   - "images/blogs/no_fees.webp"

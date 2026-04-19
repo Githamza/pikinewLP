@@ -1,5 +1,6 @@
 ---
 title: "Le QR code au restaurant : bien plus qu'un simple menu digital"
+slug: "qr-code-restaurant-menu-digital"
 description: "Comment le QR code révolutionne l'expérience client en restauration, de la consultation du menu à la commande et au paiement."
 images:
   - "images/blogs/qr_code.webp"

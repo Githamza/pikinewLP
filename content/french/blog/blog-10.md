@@ -1,5 +1,6 @@
 ---
 title: "Titres-restaurant le dimanche : bonne nouvelle pour vos clients, mauvaise pour votre caisse"
+slug: "titres-restaurant-dimanche-restaurateurs"
 description: "Le gouvernement ouvre les titres-restaurant au dimanche. Pourquoi c'est un risque pour les restaurateurs et 5 actions concrètes pour capter ces dépenses avant qu'elles ne partent au supermarché."
 images:
   - "images/blogs/titres-restaurant-dimanche.webp"
