@@ -21,7 +21,8 @@
   RewriteRule ^blog/blog-7/?$ /blog/livraison-vs-click-and-collect-restaurant/ [R=301,L]
   RewriteRule ^blog/blog-8/?$ /blog/creer-menu-digital-restaurant-attractif/ [R=301,L]
   RewriteRule ^blog/blog-9/?$ /blog/rappel-listeria-plats-prepares-restaurateurs/ [R=301,L]
-  RewriteRule ^blog/blog-10/?$ /blog/fidelite-client-restaurant-guide/ [R=301,L]
+  RewriteRule ^blog/blog-10/?$ /blog/titres-restaurant-dimanche-restaurateurs/ [R=301,L]
+  RewriteRule ^blog/blog-11/?$ /blog/fidelite-client-restaurant-guide/ [R=301,L]
 </IfModule>
 
 # =============================================
