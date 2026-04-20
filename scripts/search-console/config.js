@@ -51,7 +51,6 @@ module.exports = {
     "https://www.piki-app.fr/features/",
     "https://www.piki-app.fr/how-it-works/",
     "https://www.piki-app.fr/use-cases/",
-    "https://www.piki-app.fr/about/",
   ],
 
   // Countries to fetch per-country query breakdowns for
