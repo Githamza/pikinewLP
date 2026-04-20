@@ -48,8 +48,8 @@ site.BaseURL "https://examplesite.com/")}}{{else}}
   name="viewport"
   content="width=device-width, initial-scale=1, maximum-scale=5"
 />
-{{/* Noindex non-valuable pages: elements, testimonials, brands-logos, about-info (section data, not real pages) */}}
-{{- $noindex := slice "elements" "testimonials" "brands-logos" "about-info" "faq" -}}
+{{/* Noindex low-value pages (kept in sitemap but not worth indexing) */}}
+{{- $noindex := slice "faq" -}}
 {{- $isNoindex := false -}}
 {{- with .File -}}
   {{- range $noindex -}}
