@@ -423,20 +423,6 @@ $btn-bg-accessible: #d4570a;
   color: $primary-color-text;
 }
 
-/* Mobile navigation: solid white background so burger icon is visible over any page background */
-@media (max-width: 1199.98px) {
-  .navigation {
-    background-color: $white;
-  }
-
-  .navigation .navbar-collapse {
-    background: $white;
-    padding: 1rem;
-    border-radius: 0 0 8px 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  }
-}
-
 /* Navigation: active & hover states must meet WCAG AA */
 .navigation .navbar-light .navbar-nav .nav-item.active .nav-link:not(select),
 .navigation .navbar-light .navbar-nav .nav-item .dropdown-toggle.active {
