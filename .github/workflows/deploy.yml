@@ -45,6 +45,11 @@ jobs:
         with:
           name: build-output
           path: public/
+          # Required so dotfiles (.htaccess, .well-known/) are kept in the
+          # artifact. upload-artifact@v4 excludes hidden files by default,
+          # which silently dropped the Apache cache-control rules from the
+          # deploy and left static assets on OVH's short default TTL (~15m).
+          include-hidden-files: true
 
   deploy:
     name: Deploy to FTP
