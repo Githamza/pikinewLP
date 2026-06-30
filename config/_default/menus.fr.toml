@@ -17,24 +17,29 @@ url = "use-cases/"
 weight = 3
 
 [[main]]
+name = "Click & Collect"
+url = "click-and-collect-restaurant/"
+weight = 4
+
+[[main]]
 name = "Tarif"
 url = "pricing/"
-weight = 4
+weight = 5
 
 [[main]]
 name = "FAQ"
 url = "faq/"
-weight = 5
+weight = 6
 
 [[main]]
 name = "Blog"
 url = "blog/"
-weight = 6
+weight = 7
 
 [[main]]
 name = "Contact"
 url = "contact/"
-weight = 7
+weight = 8
 
 
 # footer menus
@@ -59,14 +64,19 @@ url = "/#pre-commande"
 weight = 1
 
 [[service]]
-name = "Commande sur place"
-url = "/#sur-place"
+name = "Click & Collect"
+url = "click-and-collect-restaurant/"
 weight = 2
+
+[[service]]
+name = "Commande sur place"
+url = "menu-qr-code-restaurant/"
+weight = 3
 
 [[service]]
 name = "Livraison"
 url = "/#livraison"
-weight = 3
+weight = 4
 
 [[help]]
 name = "FAQ"

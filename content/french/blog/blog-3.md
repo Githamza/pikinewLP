@@ -31,6 +31,6 @@ Contrairement aux idées reçues, les clients de tous âges se sont habitués au
 
 ### Comment bien l'implémenter
 
-La clé du succès réside dans la simplicité. Le QR code doit être visible, le menu doit charger instantanément et l'interface doit être intuitive. Avec Piki, votre menu digital est optimisé pour mobile, rapide à charger et personnalisé aux couleurs de votre établissement.
+La clé du succès réside dans la simplicité. Le QR code doit être visible, le menu doit charger instantanément et l'interface doit être intuitive. Avec Piki, votre [menu par QR code](/menu-qr-code-restaurant/) est optimisé pour mobile, rapide à charger et personnalisé aux couleurs de votre établissement.
 
 Ne sous-estimez pas le potentiel du QR code : c'est un levier de croissance pour votre restaurant.

@@ -1,11 +1,11 @@
 ---
-title: "0 % de commission : pourquoi c'est important pour votre restaurant"
+title: "Commission Uber Eats et Deliveroo : le vrai coût et l'alternative sans commission"
 slug: "commission-zero-livraison-restaurant"
-description: "Les plateformes de livraison prélèvent jusqu'à 30 % sur chaque commande. Découvrez le vrai coût de ces commissions et comment garder vos marges."
+description: "Uber Eats et Deliveroo prélèvent 15 à 30 % de commission sur chaque commande. Découvrez le vrai coût de ces commissions et l'alternative sans commission pour votre restaurant."
 images:
   - "images/blogs/no_fees.webp"
 date: 2025-02-28T09:00:00+01:00
-tags: ["Commission", "Rentabilité"]
+tags: ["Commission", "Uber Eats", "Deliveroo", "Rentabilité"]
 categories: ["Gestion"]
 draft: false
 ---
@@ -13,6 +13,10 @@ draft: false
 On va être honnête : quand on ouvre un restaurant, on ne s'attend pas à reverser un tiers de son chiffre d'affaires en ligne à une application. Et pourtant, c'est exactement ce qui se passe aujourd'hui pour des milliers de restaurateurs en France.
 
 Uber Eats, Deliveroo, Just Eat — ces plateformes de livraison ont rendu la commande en ligne accessible à tout le monde. Côté client, c'est pratique. Côté restaurateur, c'est une autre histoire. Avec des taux de commission qui grimpent entre 15 % et 30 % par commande (parfois jusqu'à 35 %), la rentabilité fond comme neige au soleil.
+
+### Quel est le taux de commission d'Uber Eats et Deliveroo ?
+
+En France, la commission d'Uber Eats et de Deliveroo se situe généralement entre **15 % et 30 % par commande** selon la formule choisie, et peut grimper jusqu'à 35 % une fois les frais annexes pris en compte. Just Eat applique des taux comparables. Concrètement, sur chaque commande passée via ces plateformes, vous reversez en moyenne un quart à un tiers du montant à un intermédiaire — avant même d'avoir payé vos coûts de production.
 
 ### Les vrais coûts, concrètement
 
@@ -34,9 +38,9 @@ Et puis il y a un truc dont on parle moins : la **dépendance**. C'est exactemen
 
 D'ailleurs, **94 % des restaurateurs** interrogés estiment que les taux de commission des plateformes sont trop élevés. Ce n'est pas un ressenti isolé, c'est un constat partagé par quasiment toute la profession. Dans un contexte où **10 à 11 établissements ferment chaque jour** en France, chaque euro de marge compte.
 
-### Reprendre le contrôle de vos commandes (et de vos marges)
+### L'alternative aux commissions Uber Eats : votre propre commande en ligne
 
-La bonne nouvelle, c'est qu'il existe une alternative simple : avoir votre **propre système de commande en ligne**. Votre site, votre QR code, votre canal. Zéro intermédiaire, zéro commission sur vos ventes.
+La bonne nouvelle, c'est qu'il existe une alternative simple à Uber Eats et Deliveroo : avoir votre **propre système de commande en ligne**. Votre site, votre QR code, votre canal. Zéro intermédiaire, zéro commission sur vos ventes.
 
 Les chiffres parlent d'eux-mêmes :
 
@@ -48,7 +52,7 @@ Et surtout, vous gardez ce qui a le plus de valeur à long terme : **votre fichi
 
 ### Pourquoi Piki change la donne
 
-Avec Piki, vous disposez d'un système de commande complet — pré-commande, commande sur place, click & collect, livraison — **sans aucune commission sur vos ventes**. Pas de frais cachés, pas de pourcentage prélevé.
+Avec Piki, vous disposez d'un système de commande complet — pré-commande, commande sur place, [click & collect](/click-and-collect-restaurant/), livraison — **sans aucune commission sur vos ventes**. Pas de frais cachés, pas de pourcentage prélevé.
 
 Votre argent reste là où il doit être : dans votre restaurant. Vos clients commandent chez vous, directement. Et vous, vous gardez le contrôle sur vos prix, vos marges, et votre relation client.
 

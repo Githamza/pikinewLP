@@ -42,6 +42,6 @@ La livraison élargit considérablement votre zone de chalandise. Vous touchez d
 
 ### Notre recommandation
 
-Commencez par le click & collect pour tester la demande et roder vos processus. Une fois que votre système est fluide, ajoutez la livraison progressivement, en commençant par un périmètre restreint.
+Commencez par le [click & collect](/click-and-collect-restaurant/) pour tester la demande et roder vos processus. Une fois que votre système est fluide, ajoutez la livraison progressivement, en commençant par un périmètre restreint.
 
 Avec Piki, vous pouvez activer ou désactiver chaque mode à tout moment, et adapter votre offre selon vos besoins et votre capacité.
